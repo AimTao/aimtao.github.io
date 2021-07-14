@@ -1,0 +1,1321 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>连接</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+  --side-bar-bg-color: #fff;
+  --control-text-color: #777;
+  --select-text-bg-color: #ffafa3;
+  --active-file-text-color: #262626;
+  --active-file-border-color: #f22f27;
+  /* --active-file-bg-color: #fff3f0; */
+  --primary-color: #f22f27;
+
+  /* 中性色 */
+  --mid-1: #ffffff;
+  --mid-2: #fafafa;
+  --mid-3: #f5f5f5;
+  --mid-4: #f0f0f0;
+  --mid-5: #d9d9d9;
+  --mid-6: #bfbfbf;
+  --mid-7: #8c8c8c;
+  --mid-8: #595959;
+  --mid-9: #434343;
+  --mid-10: #262626;
+  --mid-11: #1f1f1f;
+  --mid-12: #141414;
+  --mid-13: #000000;
+  /* 主题色 */
+  --main-1: #fff3f0;
+  --main-2: #ffd4cc;
+  --main-3: #ffafa3;
+  --main-4: #ff887a;
+  --main-5: #ff5d52;
+  --main-6: #f22f27;
+  --main-7: #cc1616;
+  --main-8: #a60a0f;
+  --main-9: #80010a;
+  --main-10: #590009;
+}
+
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
+  color: var(--mid-10);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.8rem;
+  letter-spacing: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+#write {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px 30px 160px;
+}
+
+#write p {
+  line-height: 1.8rem;
+  word-spacing: 0.05rem;
+}
+
+#write ol li {
+  margin-left: -4px;
+}
+#write ol li p {
+  margin-left: 4px;
+}
+
+
+#write ul {
+  line-height: 2rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+  margin-top: 30px;
+}
+
+body > *:first-child {
+  margin-top: 0 !important;
+}
+
+body > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+a {
+  color: var(--main-6);
+  font-weight: 500;
+  padding: 0 2px;
+  text-decoration: none;
+}
+
+/* 链接 */
+#write a {
+  border-bottom: 1px solid var(--main-6);
+  color: var(--main-6);
+  text-decoration: none;
+}
+
+/* 目录 */
+#write a.md-toc-inner {
+  line-height: 1.6;
+  white-space: pre-line;
+  border-bottom: none;
+}
+
+#write a:hover {
+  border-bottom: 2px solid var(--main-6);
+  color: var(--main-7);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  line-height: 1.4;
+  cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+  text-decoration: none;
+}
+
+h1 tt,
+h1 code,
+h2 tt,
+h2 code,
+h3 tt,
+h3 code,
+h4 tt,
+h4 code,
+h5 tt,
+h5 code,
+h6 tt,
+h6 code {
+  font-size: inherit !important;
+}
+
+h2 a,
+h3 a {
+  color: var(--mid-9);
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 0.3em;
+  font-size: 2em;
+  line-height: 1.2;
+  margin: 2.4em auto 1.2em;
+}
+
+h1:after {
+  content: '';
+  display: block;
+  margin: 0.2em auto 0;
+  width: 100px;
+  height: 2px;
+  border-bottom: 2px dashed var(--main-6);
+}
+
+h2 {
+  margin: 2em auto 1.4em;
+  padding-left: 6px;
+  line-height: 1.4;
+  font-size: 1.6em;
+  border-left: 6px solid var(--main-6);
+}
+
+h3 {
+  margin: 1.6em auto 1.2em;
+  font-size: 1.35em;
+  line-height: 1.43;
+}
+
+/*--- 三级标题左边的小圆点 ---*/
+h3:before {
+  content: '';
+  border-radius: 50%;
+  background-color: var(--main-5);
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  vertical-align: middle;
+  margin-bottom: 0.18em;
+  margin-right: 6px;
+}
+
+/* 三级四级标题点击后左边的提示图标 */
+#write > h3.md-focus:before,
+#write > h4.md-focus:before {
+  width: auto;
+  height: auto;
+  background-color: var(--main-5);
+  color: var(--mid-1);
+}
+
+h4 {
+  margin-top: 1.4em;
+  font-size: 1.2em;
+}
+
+/*--- 四级标题左边的小短线 ---*/
+h4:before {
+  background-color: var(--main-4);
+  content: '';
+  width: 6px;
+  display: inline-block;
+  height: 2px;
+  vertical-align: middle;
+  margin-bottom: 0.18em;
+  margin-right: 8px;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 1em;
+  color: var(--mid-7);
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+  margin: 0.8em 0;
+}
+
+li > ol,
+li > ul {
+  margin: 0 0;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  padding: 0;
+  margin: 46px auto 64px;
+  background-color: var(--main-4);
+  border: 0;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+  margin-top: 0;
+}
+
+li p.first {
+  display: inline-block;
+}
+
+ul,
+ol {
+  padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+  margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+  margin-bottom: 0;
+}
+
+/*--- 引用块 ---*/
+blockquote {
+  position: relative;
+  border: none;
+  border-left: 2px solid var(--main-6);
+  color: var(--mid-7);
+  font-size: 1em;
+  font-style: normal;
+  padding: 24px 16px 12px;
+  margin: 24px 0 36px;
+  line-height: 1.6;
+  text-indent: 0;
+}
+
+blockquote blockquote {
+  padding-right: 0;
+}
+
+blockquote a {
+  color: var(--main-4);
+}
+
+blockquote:before {
+  content: '“';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  color: var(--main-6);
+  font-size: 2em;
+  font-family: Arial, serif;
+  line-height: 1em;
+  font-weight: 700;
+}
+
+table {
+  margin: 36px auto;
+  padding: 0;
+  word-break: initial;
+}
+
+table tr {
+  border-top: 1px solid #dfe2e5;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+  background-color: var(--mid-3);
+}
+
+table tr th {
+  font-weight: bold;
+  border: 1px solid #dfe2e5;
+  border-bottom: 0;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+table tr td {
+  border: 1px solid #dfe2e5;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+  margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+  margin-bottom: 0;
+}
+
+#write table thead th {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+#write strong {
+  padding: 0 1px;
+}
+
+#write em {
+  padding: 0 5px 0 2px;
+}
+
+#write .CodeMirror-gutters {
+  border-right: none;
+}
+
+/* 代码块 */
+#write .md-fences {
+  -webkit-font-smoothing: initial;
+  margin: 1.8rem 0 2rem !important;
+  line-height: 1.55rem;
+  font-family: Source Code Pro, Roboto Mono, Source Sans Pro, 'Microsoft YaHei', '微软雅黑' !important;
+  font-size: 0.9rem;
+  word-wrap: normal;
+  color: var(--mid-10);
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+  padding-left: 12px;
+  line-height: 1.55rem;
+}
+
+#write .CodeMirror-cursors .CodeMirror-cursor {
+  border-left: 2px solid var(--mid-4);
+}
+
+#write code,
+tt {
+  margin: 0 2px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-family: Source Code Pro, Roboto Mono, Source Sans Pro, 'Microsoft YaHei', '微软雅黑' !important;
+  font-size: 0.92rem;
+  color: var(--main-5);
+  background-color: var(--main-1);
+}
+
+#write .md-footnote {
+  color: var(--main-5);
+  background-color: var(--main-1);
+}
+
+/* 流程图块 */
+#write .md-diagram-panel {
+  position: relative;
+  margin: 24px auto;
+}
+
+#write .md-focus .md-diagram-panel {
+  border: 1px solid var(--main-4);
+  border-radius: 4px;
+}
+
+/* heighlight. */
+#write mark {
+  background-color: var(--main-4);
+  border-radius: 2px;
+  padding: 2px 4px;
+  margin: 0 2px;
+  color: #222;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+#write del {
+  padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+  color: #22a2c9;
+}
+
+.cm-s-inner .cm-string {
+  color: #22a2c9;
+}
+
+/* 任务列表小方框 */
+.md-task-list-item > input {
+  margin-left: -1.3em;
+  margin-top: 0.3rem;
+  -webkit-appearance: none;
+}
+
+.md-task-list-item > input:before {
+  content: '';
+  display: inline-block;
+  width: 0.875rem;
+  height: 0.875rem;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--mid-1);
+  border-radius: 2px;
+  border: 1px solid var(--main-4);
+  margin-top: -0.4rem;
+  transition: all 0.2s linear;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+  content: '\2714';
+  font-size: 0.625rem;
+  color: var(--mid-1);
+  border: 1px solid var(--main-6);
+  background-color: var(--main-6);
+}
+
+@media print {
+  html {
+    font-size: 13px;
+  }
+
+  table,
+  pre {
+    page-break-inside: avoid;
+  }
+
+  pre {
+    word-wrap: break-word;
+  }
+}
+
+/* .md-fences {
+  background-color: #f8f8f8;
+} */
+
+#write pre.md-meta-block {
+  /* padding: 1rem; */
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border: 0;
+  border-radius: 3px;
+  color: #777777;
+  margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+  bottom: 0.375rem;
+}
+
+#write > h3.md-focus:before {
+  left: -1.5625rem;
+  top: 0.375rem;
+}
+
+#write > h4.md-focus:before {
+  left: -1.5625rem;
+  top: 0.285714286rem;
+}
+
+#write > h5.md-focus:before {
+  left: -1.5625rem;
+  top: 0.285714286rem;
+}
+
+#write > h6.md-focus:before {
+  left: -1.5625rem;
+  top: 0.285714286rem;
+}
+
+/*--- 图片 ---*/
+.md-image {
+  margin: 24px auto;
+  border-radius: 4px;
+}
+
+.md-image img {
+  border-radius: 4px;
+}
+
+/* 当 “![shadow-随便写]()”写时，会有阴影 */
+.md-image img[alt|='shadow'] {
+  box-shadow: 0 4px 24px -6px #ddd;
+}
+
+.md-image > .md-meta {
+  border-radius: 3px;
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  padding: 2px 0 0 4px;
+  font-size: 0.9em;
+  color: inherit;
+}
+
+/* emoji */
+.md-emoji-span:before {
+  content: attr(data-emoji);
+  font-weight: 400;
+  vertical-align: inherit;
+}
+
+.md-tag {
+  color: inherit;
+}
+
+.md-toc {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sidebar-tabs {
+  border-bottom: none;
+}
+
+#typora-quick-open {
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+  background-color: #fafafa;
+  border-color: #fefefe #e5e5e5 #e5e5e5 #eee;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#md-notification:before {
+  top: 10px;
+}
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+  border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+  visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+  background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+  color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+  --item-hover-bg-color: #e6f0fe;
+}
+
+/* 侧边栏 */
+.file-list-item.active {
+  background: var(--active-file-bg-color);
+  color: var(--active-file-text-color);
+  border-left: 4px solid var(--main-6);
+}
+
+.file-tree-node.active > .file-node-background {
+  background-color: var(--active-file-bg-color);
+  border-left: 4px solid var(--main-6);
+  border-color: var(--active-file-border-color);
+}
+
+/* ----------------- 代码块主题 ----------------- */
+
+.cm-s-inner.CodeMirror {
+  padding: 0.8rem 0 1rem;
+  background-color: #292d3e;
+  color: #a6accd;
+  border-radius: 4px;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+  background: #292d3e;
+  color: #676e95;
+  border: none;
+}
+
+.cm-s-inner .CodeMirror-guttermarker,
+.cm-s-inner .CodeMirror-guttermarker-subtle,
+.cm-s-inner .CodeMirror-linenumber {
+  color: #676e95;
+}
+
+.cm-s-inner .CodeMirror-cursor {
+  border-left: 1px solid #ffcc00;
+}
+
+.cm-s-inner div.CodeMirror-selected {
+  background: rgba(113, 124, 180, 0.2);
+}
+
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+  background: rgba(113, 124, 180, 0.2);
+}
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line > span::selection,
+.cm-s-inner .CodeMirror-line > span > span::selection {
+  background: rgba(128, 203, 196, 0.2);
+}
+
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line > span::-moz-selection,
+.cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+  background: rgba(128, 203, 196, 0.2);
+}
+
+/* .cm-s-inner .CodeMirror-activeline-background {
+    background: rgba(255, 255, 255, 0.5);
+  } */
+
+.cm-s-inner .cm-keyword {
+  color: #c792ea;
+}
+
+.cm-s-inner .cm-operator {
+  color: #89ddff;
+}
+
+.cm-s-inner .cm-variable-2 {
+  color: #eeffff;
+}
+
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+  color: #f07178;
+}
+
+.cm-s-inner .cm-builtin {
+  color: #ffcb6b;
+}
+
+.cm-s-inner .cm-atom {
+  color: #f78c6c;
+}
+
+.cm-s-inner .cm-number {
+  color: #ff5370;
+}
+
+.cm-s-inner .cm-def {
+  color: #82aaff;
+}
+
+.cm-s-inner .cm-string {
+  color: #c3e88d;
+}
+
+.cm-s-inner .cm-string-2 {
+  color: #f07178;
+}
+
+.cm-s-inner .cm-comment {
+  color: #676e95;
+}
+
+.cm-s-inner .cm-variable {
+  color: #f07178;
+}
+
+.cm-s-inner .cm-tag {
+  color: #ff5370;
+}
+
+.cm-s-inner .cm-meta {
+  color: #ffcb6b;
+}
+
+.cm-s-inner .cm-attribute {
+  color: #c792ea;
+}
+
+.cm-s-inner .cm-property {
+  color: #c792ea;
+}
+
+.cm-s-inner .cm-qualifier {
+  color: #decb6b;
+}
+
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+  color: #decb6b;
+}
+
+.cm-s-inner .cm-error {
+  color: rgba(255, 255, 255, 1);
+  background-color: #ff5370;
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-mac'><h1><a name="c" class="md-header-anchor"></a><span>C</span></h1><p><span>------------------ 32套基础视频教程（推荐观看1~4套）------------------</span></p><p><span>郝斌C语言入门视频教程下载（180集全）（国内最受欢迎的C语言视频教程）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1dGkkNEL' target='_blank' class='url'>https://pan.baidu.com/s/1dGkkNEL</a><span>    提取密码：94w5</span></p><p><span>小甲鱼C语言基础视频教程（带源码和课件）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1c3rExuo' target='_blank' class='url'>https://pan.baidu.com/s/1c3rExuo</a><span>    提取密码：4id2</span></p><p><span>最适合自学的C语言基础视频教程（传智播客出品）</span>
+<span>本教程带有两个项目实战，分别是“编写IDE集成开发环境”和“电子词典快译通”。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/12H7LSIRuKiS9gfI6TBkJ2w' target='_blank' class='url'>https://pan.baidu.com/s/12H7LSIRuKiS9gfI6TBkJ2w</a><span>    提取密码：uk7b</span></p><p><span>郁金香2013网络授课C语言视频教程（115集全）（非常经典）</span>
+<span>套视频的讲解内容相信很多人都会感兴趣，除了C的基本语法，还包括数据结构、算法、界面和游戏设计。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1nxkQLDJ' target='_blank' class='url'>https://pan.baidu.com/s/1nxkQLDJ</a><span>    提取密码：gwwd</span></p><p><span>快准狠 30分钟彻底学会C语言指针</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1lnBRm9uA70ODursYrURFLQ' target='_blank' class='url'>https://pan.baidu.com/s/1lnBRm9uA70ODursYrURFLQ</a><span>    提取密码：h5ua</span></p><p><span>C语言指针专题讲解（艾伦主讲）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1jIVN36Y' target='_blank' class='url'>https://pan.baidu.com/s/1jIVN36Y</a><span>    提取密码：5hkx</span></p><p><span>（尚观）嵌入式C语言视频教程（基于Linux）（实践派）</span>
+<span>网上的大部分 C 语言视频教程是按照大学的思路讲解的，是理论派，这套课程是结合嵌入式的特性来讲解 C 语言，注重实践。</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1kTmpAlT' target='_blank' class='url'>http://pan.baidu.com/s/1kTmpAlT</a><span>    提取密码：568d</span></p><p><span>小码哥C++学院--零基础入门C语言</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1SWNVi7SJfTLIQd1nbLYcKQ' target='_blank' class='url'>https://pan.baidu.com/s/1SWNVi7SJfTLIQd1nbLYcKQ</a><span>    提取密码：qj76</span></p><p><span>跟安全界的大佬学C语言--深学活用</span>
+<span>这是一套直接面向企业需求和底层开发的高标准C语言学习教程，最后还讲到C语言和汇编的关系，也即C语言是如何转换成汇编的。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1vYAlrb-qywBLcxZ6lIBpZA' target='_blank' class='url'>https://pan.baidu.com/s/1vYAlrb-qywBLcxZ6lIBpZA</a><span>    提取密码：3ljz</span></p><p><span>C语言从菜鸟到高手（传智播客尹成主讲3套全）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1TPBHc3DtH8xx69A_Pa3C-g' target='_blank' class='url'>https://pan.baidu.com/s/1TPBHc3DtH8xx69A_Pa3C-g</a><span>    提取密码：4mef</span></p><p><span>中华黑客联盟C语言入门教程（50集全）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1N7uED2gZgwutCklz6kx3wg' target='_blank' class='url'>https://pan.baidu.com/s/1N7uED2gZgwutCklz6kx3wg</a><span>    提取密码：pog3</span></p><p><span>黑客基地C语言视频教程（毒宫玫瑰主讲共26讲）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1c0xZk3I' target='_blank' class='url'>http://pan.baidu.com/s/1c0xZk3I</a><span>    提取密码：ueyr</span></p><p><span>黑客基地C语言编程特训视频教程（桂圆主讲共18节）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1c0tVvRq' target='_blank' class='url'>http://pan.baidu.com/s/1c0tVvRq</a><span>    提取密码：n444</span></p><p><span>轻松掌握C语言视频教程（黑马程序员）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1oz6PJl4Ohs6Lfzpz1KnDNg' target='_blank' class='url'>https://pan.baidu.com/s/1oz6PJl4Ohs6Lfzpz1KnDNg</a><span>    提取密码：9mzb</span></p><p><span>C语言除疑系列（小毅作品）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1bno7IlL' target='_blank' class='url'>http://pan.baidu.com/s/1bno7IlL</a><span>    提取密码：n62b</span></p><p><span>千峰C语言视频教程</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1i4MBwH3' target='_blank' class='url'>http://pan.baidu.com/s/1i4MBwH3</a><span>    提取密码：yqly</span></p><p><span>《C语言，好爽》系列全套（6期全）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1eQnfKGE' target='_blank' class='url'>http://pan.baidu.com/s/1eQnfKGE</a><span>    提取密码：2bbx</span></p><p><span>自学去C语言视频教程flv高清版本（刘云飞主讲）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1bnpTHIf' target='_blank' class='url'>http://pan.baidu.com/s/1bnpTHIf</a><span>    提取密码：ydjm</span></p><p><span>浙江大学C语言视频教程（颜晖主讲）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1mgrDtC8' target='_blank' class='url'>http://pan.baidu.com/s/1mgrDtC8</a><span>    提取密码：jpu8</span></p><p><span>闲云野鸟(鹤)漫谈C语言</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1ntKH55B' target='_blank' class='url'>http://pan.baidu.com/s/1ntKH55B</a><span>    提取密码：4afv</span></p><p><span>计算机二级C语言视频（金文主讲，247集全）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1jG7quCA' target='_blank' class='url'>http://pan.baidu.com/s/1jG7quCA</a><span>    提取密码：63c3</span></p><p><span>华夏联盟C语言系列教程（小聪主讲）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1jGHzMy6' target='_blank' class='url'>http://pan.baidu.com/s/1jGHzMy6</a><span>    提取密码：nr9t</span></p><p><span>（小七技术论坛VIP）C语言零基础入门教程</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1ntKH341' target='_blank' class='url'>http://pan.baidu.com/s/1ntKH341</a><span>    提取密码：4mn4</span></p><p><span>IT9网络学院VIP之C语言视频教程（共60课）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1qWp3loS' target='_blank' class='url'>http://pan.baidu.com/s/1qWp3loS</a><span>    提取密码：ch33</span></p><p><span>C语言教学（哈尔滨工业大学 温东新主讲）（68讲版）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1dD0EUGx' target='_blank' class='url'>http://pan.baidu.com/s/1dD0EUGx</a><span>    提取密码：byvt</span></p><p><span>C语言程序设计视频教程（徐红波主讲）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1i3KjA9v' target='_blank' class='url'>http://pan.baidu.com/s/1i3KjA9v</a><span>    提取密码：9vyh</span></p><p><span>C语言程序设计视频教程（吉林大学康辉主讲，51集全）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1BAxaA' target='_blank' class='url'>http://pan.baidu.com/s/1BAxaA</a><span>    提取密码：qphe</span></p><p><span>C语言视频教程（石油大学 曾怡主讲）（33集全）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1gdF3XPT' target='_blank' class='url'>http://pan.baidu.com/s/1gdF3XPT</a><span>    提取密码：pu87</span></p><p><span>C语言入门教程（哈尔滨工业大学温东新54讲版）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1sj4unFn' target='_blank' class='url'>http://pan.baidu.com/s/1sj4unFn</a><span>    提取密码：cvvb</span></p><p><span>金金网校C语言游戏开发视频教程（金金主讲）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1fHo4IJ_rC_dDDHm2V4c4nA' target='_blank' class='url'>https://pan.baidu.com/s/1fHo4IJ_rC_dDDHm2V4c4nA</a><span>    提取密码：phh0</span></p><p><span>范磊《零起点学通C语言》（附带原版PDF电子书）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1hq4CDDE' target='_blank' class='url'>http://pan.baidu.com/s/1hq4CDDE</a><span>    提取密码：ahs6</span></p><p><span>《C语言程序设计与项目实践》随书光盘（包括源码、视频、课件等）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1gdgYhzX' target='_blank' class='url'>http://pan.baidu.com/s/1gdgYhzX</a><span>    提取密码：trvz</span></p><p>&nbsp;</p><p><span>------------------ 9套进阶视频教程（推荐1~4套）------------------</span></p><p><span>《C语言也能干大事》第二版视频全集下载（杨中科主讲）</span>
+<span>和其他C语言视频教程不同，这套C语言视频讲解C语言的实际应用，包括界面开发（GUI）、网络编程（socket）、网站开发、多线程、动态链接库、数据库开发、音乐播放器开发等。</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1x5dc' target='_blank' class='url'>http://pan.baidu.com/s/1x5dc</a><span>    提取密码：8mrx</span></p><p><span>小码哥C++学院--C语言进阶篇</span>
+<span>涉及进程内存模型、函数调用原理、指针、动态库和静态库等。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1Pvw9DNad-P1dhMGy4TBG-A' target='_blank' class='url'>https://pan.baidu.com/s/1Pvw9DNad-P1dhMGy4TBG-A</a><span>    提取密码：std4</span></p><p><span>C语言深入剖析班（国嵌 唐老师主讲）（直戳C语言的本质）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1hqnb9DM' target='_blank' class='url'>http://pan.baidu.com/s/1hqnb9DM</a><span>    提取密码：wnqh</span></p><p><span>黑马程序员C语言进阶教程（强烈推荐，看过绝不后悔）</span>
+<span>这套进阶教程深度剖析了C语言的底层，让你知道它的实现原理，包括内存分配（内存模型）、函数调用模型、指针、动态链接库等。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1dOipEZHoOUpAXFajG4AFUA' target='_blank' class='url'>https://pan.baidu.com/s/1dOipEZHoOUpAXFajG4AFUA</a><span>    提取密码：gzhu</span></p><p><span>李明C语言中级视频教程下载（42集高清原画）</span>
+<span>本教程的特色是案例式教学，在解决各种实际问题的过程中让大家学到C语言知识，比如判断奇数偶数、输出九九乘法表、约瑟夫环、判断机器的大小端、车辆限行实验、判断地图上某点是否有出路、实现自己的printf、实现Shell命令解释器、实现C语言预处理器、实现C语言词法分析器等。</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1c0HgQM8' target='_blank' class='url'>http://pan.baidu.com/s/1c0HgQM8</a><span>    提取密码：jjv7</span></p><p><span>GCC 编译器使用入门培训 共16集（小布老师作品）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1mg9oiWo' target='_blank' class='url'>http://pan.baidu.com/s/1mg9oiWo</a><span>    提取密码：pr47</span></p><p><span>AGP论坛C语言入门VIP教程（很给力）（后半部分重点讲解与黑客有关的知识）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/17t6cDmzo15XIwRo1BRedlg' target='_blank' class='url'>https://pan.baidu.com/s/17t6cDmzo15XIwRo1BRedlg</a><span>    提取密码：cksw</span></p><p><span>C语言编写易语言支持库</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1cjBjKUqXVA0S_I4zzFpFXw' target='_blank' class='url'>https://pan.baidu.com/s/1cjBjKUqXVA0S_I4zzFpFXw</a><span>    提取密码：28qb</span></p><p><span>Linux下C语言 socket网络编程</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/11xwrke2XjDuE6TpjXdDxbw' target='_blank' class='url'>https://pan.baidu.com/s/11xwrke2XjDuE6TpjXdDxbw</a><span>    提取密码：azz9</span></p><p><span>------------------ 4套项目实践/经典案例（推荐前2个）------------------</span></p><p><span>C语言开发2048小游戏</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/19PJs8xSM0fuX0BFzcALFUw' target='_blank' class='url'>https://pan.baidu.com/s/19PJs8xSM0fuX0BFzcALFUw</a><span>    提取密码：dla4</span></p><p><span>C语言开发贪吃蛇小游戏</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/19I3Es9uDKlBgHb0Qd-S35Q' target='_blank' class='url'>https://pan.baidu.com/s/19I3Es9uDKlBgHb0Qd-S35Q</a><span>    提取密码：4vqd</span></p><p><span>535个C语言经典实例教学视频及源代码</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1rvgBqzDvUPdXe_re_G8Bgw' target='_blank' class='url'>https://pan.baidu.com/s/1rvgBqzDvUPdXe_re_G8Bgw</a><span>    提取密码：27hw</span></p><p><span>C语言大型项目之安全协议传输平台（价值1.5W）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1Jb9Dy72c-oX1wfMUMAQ7bA' target='_blank' class='url'>https://pan.baidu.com/s/1Jb9Dy72c-oX1wfMUMAQ7bA</a><span>    提取密码：q7u3</span></p><p>&nbsp;</p><p>&nbsp;</p><h1><a name="c-n328" class="md-header-anchor"></a><span>C++</span></h1><p><span>------------------ 基础视频教程（推荐1~5套）------------------</span></p><p><span>小甲鱼C++快速入门教程（以C语言为基础进行讲解）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1I0H619Gu4olNe5U3buLaIw' target='_blank' class='url'>https://pan.baidu.com/s/1I0H619Gu4olNe5U3buLaIw</a><span>    提取密码：ibc0</span></p><p><span>国嵌C++精讲入门教程（以C语言为基础进行讲解）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1bnrWsAN' target='_blank' class='url'>http://pan.baidu.com/s/1bnrWsAN</a><span>    提取密码：wwa4</span></p><p><span>达内C++21天视频教程</span>
+<span>课程将 C++ 分为两部分讲解：一是 Core C++，也就是 C++ 的核心语法，它不依赖于平台；二是 Unix C++，也就是 C++ 在 Unix 平台上的开发。</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1dDhIQCL' target='_blank' class='url'>http://pan.baidu.com/s/1dDhIQCL</a><span>    提取密码：mubm</span></p><p><span>传智播客最经典的C++视频教程（从入门到高级）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1p-EPFIaWpMkQQqoTL5RoHw' target='_blank' class='url'>https://pan.baidu.com/s/1p-EPFIaWpMkQQqoTL5RoHw</a><span>    提取密码：ukj6</span></p><p><span>黑马程序员C++入门视频教程（完整版）</span>
+<span>本套 C++ 视频教程是一套超级完整的 C++ 视频教程，涵盖了 C 语言提高部分、C++ 基础部分、STL、设计模式以及数据结构。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1QsWjnUEmZuCNaIU-VnRrZQ' target='_blank' class='url'>https://pan.baidu.com/s/1QsWjnUEmZuCNaIU-VnRrZQ</a><span>    提取密码：rjtg</span></p><p><span>C++菜鸟入门起飞视频(黑盾VIP 125课)</span>
+<span>黑盾 VIP 课程，C++ 菜鸟基础起飞课程共 125 课，课程非常详细，适合 C++ 新手学习。</span>
+<span>百度网盘1：</span><a href='https://pan.baidu.com/s/1muffLoOo5NuPtmZsLGKVwQ' target='_blank' class='url'>https://pan.baidu.com/s/1muffLoOo5NuPtmZsLGKVwQ</a><span>    提取密码：6aa9</span>
+<span>百度网盘2：</span><a href='https://pan.baidu.com/s/1KeWOzFYDNeK8H_iWUWZDlg' target='_blank' class='url'>https://pan.baidu.com/s/1KeWOzFYDNeK8H_iWUWZDlg</a><span>    提取密码：jfbj</span></p><p><span>匠心精作C++从0到1入门编程</span>
+<span>课程分为七个阶段：①C++从0到1入门学编程 ②通讯录管理系统实战 ③C++核心编程 ④基于多态的企业职工系统 ⑤C++提高编程 ⑥基于STL泛化编程的演讲比赛 ⑦C++实战项目机房预约管理系统</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1CKltKjrjbJWVHHTO7z2NqQ' target='_blank' class='url'>https://pan.baidu.com/s/1CKltKjrjbJWVHHTO7z2NqQ</a><span>    提取密码：tw2p</span></p><p><span>六星教育C++从入门到精通（知识点涵盖全面）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1SbAvGpkIxUxWLWzP83bbbg' target='_blank' class='url'>https://pan.baidu.com/s/1SbAvGpkIxUxWLWzP83bbbg</a><span>    提取密码：1eoe</span></p><p><span>炼数成金C++视频教程（从入门到进阶）</span>
+<span>除了讲解C++，本教程还讲解了网络编程、多线程、序列化以及图形界面编程（GUI）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1dDGoMul' target='_blank' class='url'>http://pan.baidu.com/s/1dDGoMul</a><span>    提取密码：n3qq</span></p><p><span>C++逆向入门视频教程（编程魔方）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1mgGG3oc' target='_blank' class='url'>http://pan.baidu.com/s/1mgGG3oc</a><span>    提取密码：zuhi</span></p><p><span>猎豹网校C++全套入门教程（初级+中级+高级）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1jGjA602' target='_blank' class='url'>http://pan.baidu.com/s/1jGjA602</a><span>    提取密码：xag3</span></p><p><span>C++ STL高级编程系列视频教程</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1dGBVi4x' target='_blank' class='url'>https://pan.baidu.com/s/1dGBVi4x</a><span>    提取密码：nc9a</span></p><p><span>好爽C++视频教程</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/17Q3IvfP9yRjDkcyRyDYqJg' target='_blank' class='url'>https://pan.baidu.com/s/17Q3IvfP9yRjDkcyRyDYqJg</a><span>    提取密码：ef8i</span></p><p><span>播布客C++面向对象程序设计</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1fFUs379BvxnjJJntHTfw3Q' target='_blank' class='url'>https://pan.baidu.com/s/1fFUs379BvxnjJJntHTfw3Q</a><span>    提取密码：cpu6</span></p><p><span>C++入门视频教程（菜鸟也疯狂）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1pbhIDkigy2US57af4qAKzA' target='_blank' class='url'>https://pan.baidu.com/s/1pbhIDkigy2US57af4qAKzA</a><span>    提取密码：tw2p</span></p><p><span>C++进阶之C++设计模式（李建忠主讲）</span>
+<span>百度网盘1：</span><a href='https://pan.baidu.com/s/1WRZn2d3GacKR2pUKwQjiIQ' target='_blank' class='url'>https://pan.baidu.com/s/1WRZn2d3GacKR2pUKwQjiIQ</a>
+<span>百度网盘2：</span><a href='https://pan.baidu.com/s/1M645VFw0kL6sCL6S8YtoSw' target='_blank' class='url'>https://pan.baidu.com/s/1M645VFw0kL6sCL6S8YtoSw</a><span>    提取密码：adol</span></p><p><span>C++版数据结构与算法（非常详细）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1P20X-if-ap9RKSwSZu6htQ' target='_blank' class='url'>https://pan.baidu.com/s/1P20X-if-ap9RKSwSZu6htQ</a><span>    提取密码：9n20</span></p><p>&nbsp;</p><p><span>------------------ 进阶视频教程 ------------------</span></p><p><span>C++内存分配、管理和工具（从平地到万丈高楼）（共60讲）</span>
+<span>从源代码的层次，深度讲解C++内存分配的原理和规则，剖析 malloc()、free()、new、delete、STL 背后的故事。看完这套视频，你对C++的理解将达到一个很高的层次，能够写出高质量的代码，能够安全的使用 STL。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1UHWx0c8bQv7wFLeJOB25zw' target='_blank' class='url'>https://pan.baidu.com/s/1UHWx0c8bQv7wFLeJOB25zw</a><span>    提取密码：5nu7</span></p><p><span>Linux/Unix C++网络编程视频教程（共41集）</span>
+<span>课程内容包括 TCP/IP、Socket编程、进程间通信、多线程、miniftpd。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1odYFB_b0sB7x-obG-zxlnw' target='_blank' class='url'>https://pan.baidu.com/s/1odYFB_b0sB7x-obG-zxlnw</a><span>    提取密码：e6k9</span></p><p><span>麦子学院Linux C++多线程程序设计（共29集，必看精品）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/13TmggyI1fbJgrBnH1a34Ag' target='_blank' class='url'>https://pan.baidu.com/s/13TmggyI1fbJgrBnH1a34Ag</a><span>    提取密码：dkqw</span></p><p><span>商用软件中的C++工程开发技术实践</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1-98bNfcCggPGGQeb3HXtwg' target='_blank' class='url'>https://pan.baidu.com/s/1-98bNfcCggPGGQeb3HXtwg</a><span>    提取密码：di22</span></p><p><span>VC++实用API编程视频教程</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1i3EeKmD' target='_blank' class='url'>http://pan.baidu.com/s/1i3EeKmD</a><span>    提取密码：ijif</span></p><p><span>C++数据库引擎开发入门教程（炼数成金）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1i38FfxV' target='_blank' class='url'>http://pan.baidu.com/s/1i38FfxV</a><span>    提取密码：eaj9</span></p><p><span>C++数据库（MySQL+Oreal）编程</span>
+<span>百度网盘1：</span><a href='https://pan.baidu.com/s/1W8woGSSZ-oNKtGYBXqCmHA' target='_blank' class='url'>https://pan.baidu.com/s/1W8woGSSZ-oNKtGYBXqCmHA</a><span>    提取密码：dwcy</span>
+<span>百度网盘2：</span><a href='https://pan.baidu.com/s/1mhIQOnY' target='_blank' class='url'>https://pan.baidu.com/s/1mhIQOnY</a></p><p><span>VC驿站VC++入门视频精品教程（重点讲解界面开发，也即GUI编程）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1bnjiMuz' target='_blank' class='url'>http://pan.baidu.com/s/1bnjiMuz</a><span>    提取密码：r3rr</span></p><p><span>VC驿站VC++高级视频教程</span>
+<span>课程包括三部分：分别是VC++高级班之窗口篇、VC++高级班之多线程篇、VC++高级班之注册表篇系列教程。</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1mg9oS7u' target='_blank' class='url'>http://pan.baidu.com/s/1mg9oS7u</a><span>    提取密码：5mtp</span></p><p>&nbsp;</p><p><span>------------------ 全栈系列（看完直接找工作） ------------------</span></p><p><span>传智博客（黑马程序员）最新C/C++全栈培训第24期高清无密（全）</span>
+<span>课程分为以下部分：C语言基础、C语言提高、数据结构、C++基础、C++提高、Qt、MFC、Linux开发、数据库编程、项目实战之安全传输平台、项目实战之云盘系统、项目实战之移动打车。</span>
+<span>百度网盘1：</span><a href='https://pan.baidu.com/s/1OxRbTlzs0urokXE9Vo6t-A' target='_blank' class='url'>https://pan.baidu.com/s/1OxRbTlzs0urokXE9Vo6t-A</a><span>    提取密码：2333</span>
+<span>百度网盘2：</span><a href='https://pan.baidu.com/s/14h6Pr_aCnsU7calq74O3gQ' target='_blank' class='url'>https://pan.baidu.com/s/14h6Pr_aCnsU7calq74O3gQ</a><span>    提取密码：8kr2</span>
+<span>百度网盘3：</span><a href='https://pan.baidu.com/s/1H3xeLZ0QpHkrqIFKbLg8uw' target='_blank' class='url'>https://pan.baidu.com/s/1H3xeLZ0QpHkrqIFKbLg8uw</a>
+<span>百度网盘4：</span><a href='https://pan.baidu.com/s/1aiJsFF4uKuVtdf-3myPGow' target='_blank' class='url'>https://pan.baidu.com/s/1aiJsFF4uKuVtdf-3myPGow</a><span>    提取密码：a5qb</span>
+<span>百度网盘5：</span><a href='https://pan.baidu.com/s/19EP6kQAjFwq7DpJbZBBqnQ' target='_blank' class='url'>https://pan.baidu.com/s/19EP6kQAjFwq7DpJbZBBqnQ</a><span>    提取密码：c6tb</span></p><p><span>C++游戏服务器开发视频教程（121集全）</span>
+<span>这是一套非常给力的C++视频教程，全面讲解C++网络开发，看完可以直接去找工作了，其中涉及C++11、ASIO网络库、通信协议设计、Lua脚本、多线程、TCP/IP协议、Windows API等。</span>
+<span>百度网盘1：</span><a href='https://pan.baidu.com/s/1MgMishglFIKd5kuMGD1RhQ' target='_blank' class='url'>https://pan.baidu.com/s/1MgMishglFIKd5kuMGD1RhQ</a><span>    提取密码：exgf</span>
+<span>百度网盘2：</span><a href='https://pan.baidu.com/s/1ucNvlEP44DGAsiYrcfDCZA' target='_blank' class='url'>https://pan.baidu.com/s/1ucNvlEP44DGAsiYrcfDCZA</a><span>    提取密码：l72l</span></p><p><span>C++大规模、分布式系统设计（高阶班课程）</span>
+<span>课程内容包括大数据系统、海量数据处理、搭建大规模可扩展系统、系统设计七剑客、硅谷面试技巧等。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/11GN6gQnd_KKPeefdD_dBxw' target='_blank' class='url'>https://pan.baidu.com/s/11GN6gQnd_KKPeefdD_dBxw</a><span>    提取密码：82st</span></p><p>&nbsp;</p><p><span>------------------ 黑客/安全相关 ------------------</span></p><p><span>C++黑客编程（非常NB，想玩黑的小伙伴必看）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1Mm7HZUnMvKRvzvzNwwIK7A' target='_blank' class='url'>https://pan.baidu.com/s/1Mm7HZUnMvKRvzvzNwwIK7A</a><span>    提取密码：5qir</span></p><p><span>安全中国VC++开发视频教程</span>
+<span>讲解了进程、线程、注册表操作、U盘自启动自执行、Socket网络编程、远程控制原理、远程文件传输、MFC界面开发等。</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1GuQRW' target='_blank' class='url'>http://pan.baidu.com/s/1GuQRW</a><span>    提取密码：mtzk</span></p><p><span>棉猴论坛C++入门视频教程（注重实践）</span>
+<span>除了讲解C++，还讲解了DLL编写、ghost远程控制、键盘监听驱动程序编写、驱动开发基础、套接字编程（socket编程）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1bnddlWb' target='_blank' class='url'>http://pan.baidu.com/s/1bnddlWb</a><span>    提取密码：t9p3</span></p><p>&nbsp;</p><p><span>------------------ 项目实战 ------------------</span></p><p><span>奔腾绿色多标签浏览器界面的开发视频教程（基于MFC）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1kTj87rx' target='_blank' class='url'>http://pan.baidu.com/s/1kTj87rx</a><span>    提取密码：85eg</span></p><p><span>Visual C++网络编程开发与实战视频教程</span>
+<span>主要内容包括 VC++ 网络开发基本应用、传输协议编程、网页浏览器、邮件传输系统、串口通信、网络传输等。内容丰富，通俗易懂，具有很强的可读性和实用性。</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1o6p8adO' target='_blank' class='url'>http://pan.baidu.com/s/1o6p8adO</a><span>    提取密码：vb7x</span></p><p><span>OpenCV &amp; FFmpeg &amp; Qt C++视频编辑器实战开发</span>
+<span>百度网盘1：</span><a href='https://pan.baidu.com/s/1hsy0Tq9bz-xCowXSSIYnrw' target='_blank' class='url'>https://pan.baidu.com/s/1hsy0Tq9bz-xCowXSSIYnrw</a><span>    提取密码：9c44</span>
+<span>百度网盘2：</span><a href='https://pan.baidu.com/s/1HQ-0MytLHUqrimGRZpRdug' target='_blank' class='url'>https://pan.baidu.com/s/1HQ-0MytLHUqrimGRZpRdug</a><span>    提取密码：x656</span></p><p><span>传智播客C++中国象棋项目视频教程</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/162gyviZxSoOtesbIoGP7LA' target='_blank' class='url'>https://pan.baidu.com/s/162gyviZxSoOtesbIoGP7LA</a><span>    提取密码：u2m9</span></p><p>&nbsp;</p><p>&nbsp;</p><h1><a name="计算机基础" class="md-header-anchor"></a><span>计算机基础</span></h1><p><span>西安交通大学计算机应用基础61讲（刘志强主讲）</span>
+<span>课程基本要求及内容：①了解和掌握计箅机基础知识：包括基本概念、 术语、计箅机组成及工作原理、敎据在计算机中表示等。②掌握Windows（98|2000）基本操作。③掌握办公自动化软件的基本操作及应用，包括：Word、 Excel、 PowerPoint、FrontPage、Access。④了解网络、Internet的基本知识、掌提网络应用的基本操作技能（E-mail、FTP. IE）。</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1qW5c6fE' target='_blank' class='url'>http://pan.baidu.com/s/1qW5c6fE</a><span>    提取密码：akyj</span></p><p><span>容错计算机设计（哈工大 刘宏伟主讲）（48讲）</span>
+<span>容错计算机是面向特殊应用的计算机，比如飞机上的计算机、导弹上的计算机、其他武器系统上的计算机等。容错计算机比较安全，即使发生系统故障也不会失效，不像我们常见的PC机和笔记本，会出现蓝屏。</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1dDiyu1j' target='_blank' class='url'>http://pan.baidu.com/s/1dDiyu1j</a><span>    提取密码：3vup</span></p><p><span>理论计算机科学基础（北京大学刘田主讲）</span>
+<span>课程包含三个模块，分别是：形式语言与自动机、可计算性和计算复杂性，主要是让大家掌握计算机理论的基本知识。</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1mgIbSNI' target='_blank' class='url'>http://pan.baidu.com/s/1mgIbSNI</a><span>    提取密码：59in</span></p><p><span>华图网校计算机基础（孙洪涛主讲）</span>
+<span>这是华图网校的网络授课课程，讲师为孙洪涛，分为三部分，包括计算机基础知识、计算机软件与操作、数据库。</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1kTzhcAr' target='_blank' class='url'>http://pan.baidu.com/s/1kTzhcAr</a><span>    提取密码：54fv</span></p><p><span>操作系统导论</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1c0jMq1E' target='_blank' class='url'>http://pan.baidu.com/s/1c0jMq1E</a><span>    提取密码：txtp</span></p><p><span>中鼎网校计算机应用基础</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1gdAe67T' target='_blank' class='url'>http://pan.baidu.com/s/1gdAe67T</a><span>    提取密码：rdxj</span></p><p><span>吉林大学微机原理及应用（赵宏伟主讲，64学时）</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1jGmrUui' target='_blank' class='url'>http://pan.baidu.com/s/1jGmrUui</a><span>    提取密码：e7se</span></p><p><span>吉林大学计算机组成原理（刘子良主讲，48课时）</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1qWlzHzY' target='_blank' class='url'>http://pan.baidu.com/s/1qWlzHzY</a><span>    提取密码：a692</span></p><p><span>吉林大学计算机应用基础（宋国东主讲，64课时）</span>
+<span>主要内容有：计算机的基本知识、中文Windows98、 Word 97、Excel 97、Powerpoint以及Internet 网络基础。</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1i3iqopn' target='_blank' class='url'>http://pan.baidu.com/s/1i3iqopn</a><span>    提取密码：hgb3</span></p><p><span>吉林大学计算机系统结构（赵宏伟主讲，48课时）</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1DCBLW' target='_blank' class='url'>http://pan.baidu.com/s/1DCBLW</a><span>    提取密码：xxgi</span></p><p><span>吉林大学计算机操作系统（李雄飞主讲，64课时）</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1ntxHdQL' target='_blank' class='url'>http://pan.baidu.com/s/1ntxHdQL</a><span>    提取密码：9ft7</span></p><p><span>国防科技大学计算机体系结构（23+26集）（带教案和习题）</span>
+<span>国防科技大学主讲的计算机体系结构，有两套，分别由姜晶菲和张春元、王志英主讲。课程内容包括：计算机体系结构的基本概念、计算机指令集结构设计、流水线技术、存储器层次结构、输入输出系统和并行处理。</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1sjJnE0H' target='_blank' class='url'>http://pan.baidu.com/s/1sjJnE0H</a><span>    提取密码：s8tb</span></p><p><span>[西安电子科技大学]计算机系统结构（杨瑞科主讲）</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1hqKlVoC' target='_blank' class='url'>http://pan.baidu.com/s/1hqKlVoC</a><span>    提取密码：4f5i</span></p><p><span>[西安电子科技大学]单片机原理与应用（赵中奇）</span>
+<span>西安电子科技大学赵中奇老师主讲的单片机原理与应用，36个学时，教材是《单片机原理与接口技术》，董晓红主编，西安电子科技大学出版社出版。</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1dDcsHBN' target='_blank' class='url'>http://pan.baidu.com/s/1dDcsHBN</a><span>    提取密码：mdvb</span></p><p><span>[上海交通大学]微型计算机组成原理（27讲）</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1jG5UJv4' target='_blank' class='url'>http://pan.baidu.com/s/1jG5UJv4</a><span>    提取密码：qh4m</span></p><p><span>[上海交通大学]计算机组成与系统结构（陈泽宇主讲）</span>
+<span>总共60个学时，参考教材是白中英等主编的《计算机组成与体系结构（第三版·网络版）》，由科学出版社出版。</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1oAcHiNC' target='_blank' class='url'>https://pan.baidu.com/s/1oAcHiNC</a><span>    提取密码：tyg4</span></p><p><span>[上海交通大学]计算机网络技术基础（邹福泰主讲）</span>
+<span>参考教材是李志球主编的《计算机网络基础 第二版》，由电子工业出版社出版。课程共18周。</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1hq8GEva' target='_blank' class='url'>http://pan.baidu.com/s/1hq8GEva</a><span>    提取密码：vatp</span></p><p><span>2014新东方计算机基础精讲班</span>
+<span>新东方2014年计算机考研班的课程，包括操作系统、计算机网络、数据结构和计算机组成原理几部分。</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1c0fI6WC' target='_blank' class='url'>http://pan.baidu.com/s/1c0fI6WC</a><span>    提取密码：8fb6</span></p><p>&nbsp;</p><h1><a name="数据结构" class="md-header-anchor"></a><span>数据结构</span></h1><p><span>------------------ 数据结构相关视频 ------------------</span></p><p><span>数据结构与算法（小甲鱼主讲）（98集全）</span>
+<span>小甲鱼决走要投入大量的精力来将达门课程打造成有屎以来最为华丽的，最为欢乐地，最 为图文并茂的课程！</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1gdKnKaB' target='_blank' class='url'>http://pan.baidu.com/s/1gdKnKaB</a><span>    提取密码：3vh3</span></p><p><span>郝斌C语言数据结构（附带源码）</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1pJysL55' target='_blank' class='url'>http://pan.baidu.com/s/1pJysL55</a><span>    提取密码：r9y5</span></p><p><span>数据结构深度实战专题班 C语言版（国嵌 唐老师主讲）（非常犀利）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1pYxuMZjLg_08eKbiuyEM-w' target='_blank' class='url'>https://pan.baidu.com/s/1pYxuMZjLg_08eKbiuyEM-w</a><span>    提取密码：kuo7</span></p><p><span>玩转数据结构从入门到进阶（慕课网出品，必属精品）</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1bmr_ncQz5Fnko7oo9OkrTw' target='_blank' class='url'>https://pan.baidu.com/s/1bmr_ncQz5Fnko7oo9OkrTw</a><span>    提取密码：3bm9</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/150XaXOrE9FKldAmTlyJMKQ' target='_blank' class='url'>https://pan.baidu.com/s/150XaXOrE9FKldAmTlyJMKQ</a><span>    提取密码：syoh</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1SIlOTpHK6zTSf0cco1QmBQ' target='_blank' class='url'>https://pan.baidu.com/s/1SIlOTpHK6zTSf0cco1QmBQ</a><span>    提取密码：cjof</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1JnnkTpmrhjx3dkn2YgpkZQ' target='_blank' class='url'>https://pan.baidu.com/s/1JnnkTpmrhjx3dkn2YgpkZQ</a><span>    提取密码：v9rn</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1k_D0a1sGjShw8JCR4lUKpg' target='_blank' class='url'>https://pan.baidu.com/s/1k_D0a1sGjShw8JCR4lUKpg</a><span>    提取密码：6666</span></p><p><span>七月在线数据结构视频教程（共10集）</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/17vpzQDKabsnyH4ut0DLFPQ' target='_blank' class='url'>https://pan.baidu.com/s/17vpzQDKabsnyH4ut0DLFPQ</a><span>    提取密码：n84h</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1rA1rLTggNth-Fo9t-SKfhQ' target='_blank' class='url'>https://pan.baidu.com/s/1rA1rLTggNth-Fo9t-SKfhQ</a><span>    提取密码：sgrz</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1tHG3buKLH0wxnuKowJraQw' target='_blank' class='url'>https://pan.baidu.com/s/1tHG3buKLH0wxnuKowJraQw</a><span>    提取密码：ea1t</span></p><p><span>尚硅谷图解Java数据结构和算法（韩顺平主讲）</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1aiMur9dTCUvnDRD32LH3Tg' target='_blank' class='url'>https://pan.baidu.com/s/1aiMur9dTCUvnDRD32LH3Tg</a><span>    提取密码：vv3k</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/16IQRV0MeUetEB8etDkEKyQ' target='_blank' class='url'>https://pan.baidu.com/s/16IQRV0MeUetEB8etDkEKyQ</a><span>    提取密码：6zxg</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1z16K4AwkIhtB-AKm3_LeWQ' target='_blank' class='url'>https://pan.baidu.com/s/1z16K4AwkIhtB-AKm3_LeWQ</a><span>    提取密码：aqyp</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/10T4bGxmF4uqUyXJ8Cv9vVw' target='_blank' class='url'>https://pan.baidu.com/s/10T4bGxmF4uqUyXJ8Cv9vVw</a><span>    提取密码：xjh8</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1ghzm2TZga_hQiUIN-ukL5Q' target='_blank' class='url'>https://pan.baidu.com/s/1ghzm2TZga_hQiUIN-ukL5Q</a></p><p><span>猎豹网校数据结构与算法（C语言版）</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1nt5OwNv' target='_blank' class='url'>http://pan.baidu.com/s/1nt5OwNv</a><span>    提取密码：s4js</span></p><p><span>数据结构与算法（C++版）（北京大学 张铭主讲）</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1o6oRynK' target='_blank' class='url'>http://pan.baidu.com/s/1o6oRynK</a><span>    提取密码：vwwk</span></p><p><span>上海交大算法与数据结构（檀晓红）</span>
+<span>共29集。avi版的，可以在线观看。</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1o6OJlKA' target='_blank' class='url'>http://pan.baidu.com/s/1o6OJlKA</a><span>    提取密码：phfd</span></p><p><span>吉林大学数据结构（C++版）（徐沛娟主讲）（共64集）</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1gdtPuvD' target='_blank' class='url'>http://pan.baidu.com/s/1gdtPuvD</a><span>    提取密码：jt54</span></p><p><span>（罗吴蔓，电子科技大学）数据结构视频教程（C语言版41集全，带目录）</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1eQpNBTS' target='_blank' class='url'>http://pan.baidu.com/s/1eQpNBTS</a><span>    提取密码：k6ca</span></p><p><span>Python 数据结构视频教程（网易云课堂出品）</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1PPMGYsbdei-QAodJoieLPw' target='_blank' class='url'>https://pan.baidu.com/s/1PPMGYsbdei-QAodJoieLPw</a><span>    提取密码：m94h</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/10AlFxCpGM6CzxXiHY2WgRg' target='_blank' class='url'>https://pan.baidu.com/s/10AlFxCpGM6CzxXiHY2WgRg</a><span>    提取密码：0ijt</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1OYoSxwJHadRNRNvashuEiw' target='_blank' class='url'>https://pan.baidu.com/s/1OYoSxwJHadRNRNvashuEiw</a><span>    提取密码：xhwe</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1G9ZDoZJMV_lN8vEdrxdzDA' target='_blank' class='url'>https://pan.baidu.com/s/1G9ZDoZJMV_lN8vEdrxdzDA</a><span>    提取密码：6frd</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1PVl-80ECuktPgh2J5CH92g' target='_blank' class='url'>https://pan.baidu.com/s/1PVl-80ECuktPgh2J5CH92g</a><span>    提取密码：9unw</span></p><p>&nbsp;</p><p><span>------------------ 算法相关视频 ------------------</span></p><p><span>万门大学数据结构与算法进阶班（基于Python）（价值1998元）</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1mpVjlqApy0EH0TV6sodggA' target='_blank' class='url'>https://pan.baidu.com/s/1mpVjlqApy0EH0TV6sodggA</a><span>    23e7</span></p><p><span>玩转算法面试——从真题到思维全面提升算法思维（慕课网出品，必属精品）</span>
+<span>相信这是一门非常及时的课程，送给面试在即的你，学完这门课程，对于面试中遇到的大多数算法问题，你都会迎刃而解，但课程绝不止于面试，同样适合即将参加各类算法竞赛的同学，重要的是提升你的算法思维，这将是贯穿你编程生涯的核心内功！</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/15HTHHNPTa6C9bvEAHywgRQ' target='_blank' class='url'>https://pan.baidu.com/s/15HTHHNPTa6C9bvEAHywgRQ</a><span>    提取密码：whgh</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/11WziUzN0oYxZ6eAxkpfDYg' target='_blank' class='url'>https://pan.baidu.com/s/11WziUzN0oYxZ6eAxkpfDYg</a><span>    提取密码：77m6</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/13lvZslu3lT80riLEQglHTw' target='_blank' class='url'>https://pan.baidu.com/s/13lvZslu3lT80riLEQglHTw</a><span>    提取密码：j2i8</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1RVhekesUv-zLSwf4YdFUrA' target='_blank' class='url'>https://pan.baidu.com/s/1RVhekesUv-zLSwf4YdFUrA</a><span>    提取密码：ylb9</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1KtCn_xFKq2ZZf9jg2Y2Zaw' target='_blank' class='url'>https://pan.baidu.com/s/1KtCn_xFKq2ZZf9jg2Y2Zaw</a><span>    提取密码：8wxn</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1sM7AgqPmqR-c08YnjbPAsA' target='_blank' class='url'>https://pan.baidu.com/s/1sM7AgqPmqR-c08YnjbPAsA</a></p><p><span>看得见的算法（7个经典应用诠释算法精髓）（慕课网出品，必属精品）</span>
+<span>采用基础的Java语言，通过7款经典好玩的游戏，带你进入不一样的算法世界，体验算法在实际开发中的应用，真正把算法用起来！本套课程的经典案例包括：随机生成迷宫算法、走迷宫小游戏、推箱子小游戏、扫雷小游戏、分形图形的绘制、排序算法可视化和概率模拟。</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1g-Pv_f_4N9kke5JVf56XNA' target='_blank' class='url'>https://pan.baidu.com/s/1g-Pv_f_4N9kke5JVf56XNA</a><span>    提取密码：92e2</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1UG-PvJFTkQrppvlUvbWMog' target='_blank' class='url'>https://pan.baidu.com/s/1UG-PvJFTkQrppvlUvbWMog</a><span>    提取密码：ir5u</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1Uum8WNVigl6nLTDurY-MmQ' target='_blank' class='url'>https://pan.baidu.com/s/1Uum8WNVigl6nLTDurY-MmQ</a><span>    提取密码：6n4f</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1nldyBdlb3lDLo5123oN9aA' target='_blank' class='url'>https://pan.baidu.com/s/1nldyBdlb3lDLo5123oN9aA</a><span>    提取密码：9r5u</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1OqJfaTyjrn1X2wt8R5gmZA' target='_blank' class='url'>https://pan.baidu.com/s/1OqJfaTyjrn1X2wt8R5gmZA</a><span>    提取密码：q93d</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1OX92MOInftokbaAlaD8eTA' target='_blank' class='url'>https://pan.baidu.com/s/1OX92MOInftokbaAlaD8eTA</a><span>    提取密码：eix0</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1o5tXa5cvkPjWysnuM_7SHA' target='_blank' class='url'>https://pan.baidu.com/s/1o5tXa5cvkPjWysnuM_7SHA</a><span>    提取密码：m9i7</span></p><p><span>算法面试通关40讲（极客时间出品）</span>
+<span>主讲人为覃超，Sophon Tech创始人，前Facebook工程师，卡内基梅隆大学计算机硕士。本课程将帮助求职者在短时间内掌握面试中最常见的算法与数据结构相关知识点，学会面试中高频算法题目的分析思路，同时给大家从面试官的角度来分析算法题的解答技巧，从而更有效地提升求职者的面试通过率。</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1Qdr9U_ZM29g4jS_Q8Us21w' target='_blank' class='url'>https://pan.baidu.com/s/1Qdr9U_ZM29g4jS_Q8Us21w</a><span>    提取密码：g3xn</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1XCKRgC_oTDc3T8AmBpuCHg' target='_blank' class='url'>https://pan.baidu.com/s/1XCKRgC_oTDc3T8AmBpuCHg</a><span>    提取密码：1jpp</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1CguTP5N7Y9Z1aX3h5uIWiA' target='_blank' class='url'>https://pan.baidu.com/s/1CguTP5N7Y9Z1aX3h5uIWiA</a><span>    提取密码：wzog</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1lTIHZkp7nes7ZWZy1f8XKA' target='_blank' class='url'>https://pan.baidu.com/s/1lTIHZkp7nes7ZWZy1f8XKA</a><span>    提取密码：8582</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/10ackR7BPRUBaHVseTUfIJg' target='_blank' class='url'>https://pan.baidu.com/s/10ackR7BPRUBaHVseTUfIJg</a><span>    提取密码：y73n</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1cQAb2i4b6rZ_mgEcxvS24Q' target='_blank' class='url'>https://pan.baidu.com/s/1cQAb2i4b6rZ_mgEcxvS24Q</a></p><p><span>牛客网算法课程（初级班+进阶班）（左神主讲）（原价1300元）</span>
+<span>学完基础课程将能够：掌握常见算法基础知识；熟悉常见算法解题思路；熟练掌握简单和普通难度题目。学完进阶课程将能够：懂得常见的算法原型，技巧，常见套路；学会分析面试题的破题点，熟练的找出熟悉的算法原型并加以改写和应用；了解题目优化的点，并具备逐步达到最优解的能力；了解很多教材上并不提及的常见算法。</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1ahe7W5VPQ7LJ7XS9Fu2BRQ' target='_blank' class='url'>https://pan.baidu.com/s/1ahe7W5VPQ7LJ7XS9Fu2BRQ</a><span>    提取密码：0465</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1XB3DNJn4OC5d6v-r-lF90Q' target='_blank' class='url'>https://pan.baidu.com/s/1XB3DNJn4OC5d6v-r-lF90Q</a><span>    提取密码：nys8</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1Uswsw3Q2KnTwT1MyqoS3Tg' target='_blank' class='url'>https://pan.baidu.com/s/1Uswsw3Q2KnTwT1MyqoS3Tg</a><span>    提取密码：zi4e</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/17mf9tCyg8hHutvUepLFc0w' target='_blank' class='url'>https://pan.baidu.com/s/17mf9tCyg8hHutvUepLFc0w</a><span>    提取密码：kv2x</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1HYx8a2IZBb6-Vel7GEijoA' target='_blank' class='url'>https://pan.baidu.com/s/1HYx8a2IZBb6-Vel7GEijoA</a><span>    提取密码：39a7</span>
+<span>下载地址：</span><a href='https://pan.baidu.com/s/1wKHmRAHB1ffd936pSBRfcw' target='_blank' class='url'>https://pan.baidu.com/s/1wKHmRAHB1ffd936pSBRfcw</a><span>    提取密码：u94g</span></p><p><span>邓俊辉算法训练营第三期（学堂在线出品）</span>
+<span>随清华邓俊辉教授，锤炼算法硬功夫！课程面向所有对于算法感兴趣、需要学习和提升算法能力的学习者，包括但不限于IT从业者/大学生/中小学生。致力于通过专业的课程设计和科学的学习管理，解决算法学习中的各类问题，最大化地保证学习者的学习效果，并为优秀学员提供权威认证。</span>
+<a href='https://pan.baidu.com/s/1D_l3Ue_qzKNczP7qRIHyXA' target='_blank' class='url'>https://pan.baidu.com/s/1D_l3Ue_qzKNczP7qRIHyXA</a><span>    lqxy</span>
+<a href='https://pan.baidu.com/s/1a3sW0fyB9P240uSa0O_nng' target='_blank' class='url'>https://pan.baidu.com/s/1a3sW0fyB9P240uSa0O_nng</a><span>    8788</span>
+<a href='https://pan.baidu.com/s/197GFI2OnE-avrwLyGu_reg' target='_blank' class='url'>https://pan.baidu.com/s/197GFI2OnE-avrwLyGu_reg</a><span>    ejdy</span></p><p><span>（中南大学 莎莎）计算机算法分析与设计（26讲）</span>
+<span>课程内容：绪论、分治法、贪心法、动态规划方法、回朔法、分枝-限界方法。</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1pJ1HgbL' target='_blank' class='url'>http://pan.baidu.com/s/1pJ1HgbL</a><span>    提取密码：a3hj</span></p><p><span>《妙趣横生的算法（C语言实现）》随书光盘（附带高清扫描版电子书）</span>
+<span>5.5小时教学视频、114个经典算法题、61个算法面试题和4个ACM竞赛题。</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1eQxpkOE' target='_blank' class='url'>http://pan.baidu.com/s/1eQxpkOE</a><span>    提取密码：9571</span></p><p><span>《零基础学算法》随书光盘（附带文字版电子书）</span>
+<span>该书分为上、下两篇，共10章。上篇用5章的篇幅介绍了算法和数据结构的基础知识，包括基础算法思想、简单数据结构、复杂数据结构、排序和查找算法等内容；下篇用5章的篇幅介绍了用数据结构解决实际问题的相关程序，包括解决数学问题、数据结构问题、算法经典问题等内容以及信息学奥赛部分试题的程序，最后一章介绍了与算法和数据结构相关的常见面试题。</span>
+<span>下载地址：</span><a href='http://pan.baidu.com/s/1kTilSSf' target='_blank' class='url'>http://pan.baidu.com/s/1kTilSSf</a><span>    提取密码：ihtt</span></p><p>&nbsp;</p><h1><a name="linux" class="md-header-anchor"></a><span>Linux</span></h1><p><span>------------------ Linux全套系列（包含完整学习路线）------------------</span></p><p><span>尚硅谷Linux运维全套视频（超级详细，看了可以直接就业）</span>
+<span>课程内容包括Linux基础知识、Linux系统管理、Shell编程、Linux服务器管理、MySQL数据库、Linux集群、Linux虚拟化等。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1PFmooY6irFrAlHiLc9LUdw' target='_blank' class='url'>https://pan.baidu.com/s/1PFmooY6irFrAlHiLc9LUdw</a><span>    提取密码：8x2m</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1ttFPE-QvXyNkC7jDlhFaDQ' target='_blank' class='url'>https://pan.baidu.com/s/1ttFPE-QvXyNkC7jDlhFaDQ</a><span>    提取密码：6ju6</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1oA11hcVoFE2tfAKZnfVWJQ' target='_blank' class='url'>https://pan.baidu.com/s/1oA11hcVoFE2tfAKZnfVWJQ</a><span>    提取密码：0k31</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1PY6TbZEGLZNdTIpg8uJNTg' target='_blank' class='url'>https://pan.baidu.com/s/1PY6TbZEGLZNdTIpg8uJNTg</a></p><p><span>Linux运维从入门到精通（61天课程，包括就业班和架构班）（知识非常全面）</span>
+<span>课程内容包括Linux基础、Shell编程、网站搭建、Apache、Nginx、Tomcat、MySQL、Linux集群、LVS集群、FTP、Redis、Linux系统调优、OpenStack、MongoDB、Hadoop、网络虚拟化、KVM、xen虚拟化、zabbix、Linux系统监控、puppet、分布式存储、mariadb、用户权限管理等，看了以后绝对可以成为大神。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1qYokL3m' target='_blank' class='url'>https://pan.baidu.com/s/1qYokL3m</a><span>    提取密码：wt64</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1bfqul49ifOWVZwVRHOBO1A' target='_blank' class='url'>https://pan.baidu.com/s/1bfqul49ifOWVZwVRHOBO1A</a>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/11H7FFWo65pa8NVTU7CC6SA' target='_blank' class='url'>https://pan.baidu.com/s/11H7FFWo65pa8NVTU7CC6SA</a><span>    提取密码：j4BP</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1rBxzP23Yar82Z86DOpxM_w' target='_blank' class='url'>https://pan.baidu.com/s/1rBxzP23Yar82Z86DOpxM_w</a><span>    提取密码：mxva</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1J0N32mWGrYbopJO-U-X8RA' target='_blank' class='url'>https://pan.baidu.com/s/1J0N32mWGrYbopJO-U-X8RA</a><span>    提取密码：3r0b</span></p><p><span>老男孩30万年薪Linux高级架构课程（共308集）</span>
+<span>上百个小项目方案，几十个企业级大项目，50台服务器集群练手。课程内容包括云计算DOCKER、ELK分布式日志、深度KVM、OPENSTACK云计算、VARNISH、nginx cache加速、ITEL、COLLBER、GATEONE、MHA集群、WAF安全技术、Heartbeat、drbd、NFS集群高可用、MFS、GlusterFS、FastDFS、JAVA TOMCAT、RESIN、JVM深度、DNS、Squid、ZABBIX、SALTSTACK、OPENVPN、IPSEC、SVN、GIT、Jekins自动化发布、代码上线、Haproxy、消息中间件RabbitmQ、METAQ、Redis分布式集群多种方案、Openldap、Salt-cloud、Etcd等。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1s3IVbuxPk-0Bq-VeeBRI4A' target='_blank' class='url'>https://pan.baidu.com/s/1s3IVbuxPk-0Bq-VeeBRI4A</a><span>    提取密码：9eq4</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1boGzrD9' target='_blank' class='url'>https://pan.baidu.com/s/1boGzrD9</a><span>    提取密码：8i45</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1kUgJW5x' target='_blank' class='url'>https://pan.baidu.com/s/1kUgJW5x</a><span>    提取密码：7jd6</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1KcpZm2QfGNfW0uUk9n7Nsg' target='_blank' class='url'>https://pan.baidu.com/s/1KcpZm2QfGNfW0uUk9n7Nsg</a>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1c8eMaL' target='_blank' class='url'>https://pan.baidu.com/s/1c8eMaL</a></p><p><span>千峰教育 Linux 运维从入门到精通系列视频教程（全套）：</span>
+<span>--基础</span>
+<span>千锋Linux教程-Linux从入门到精通（小白必看） </span><a href='https://pan.baidu.com/s/1uolNceZnHJ5DEf3DmvMrwg' target='_blank' class='url'>https://pan.baidu.com/s/1uolNceZnHJ5DEf3DmvMrwg</a><span> 提取码：o7zy</span>
+<span>千锋Linux教程-Shell脚本入门全套教程 </span><a href='https://pan.baidu.com/s/1Wu9PPnxISot2aP44BE83lA' target='_blank' class='url'>https://pan.baidu.com/s/1Wu9PPnxISot2aP44BE83lA</a><span> 提取码：wphd</span>
+<span>千锋Linux教程-Linux云计算网络管理实战 </span><a href='https://pan.baidu.com/s/1IIozSjzDmHK4M5qp93uylg' target='_blank' class='url'>https://pan.baidu.com/s/1IIozSjzDmHK4M5qp93uylg</a><span> 提取码：cxuz</span>
+<span>--进阶</span>
+<span>2019千锋Linux教程-大型网站高并发之集群 </span><a href='https://pan.baidu.com/s/12enOZqbB96ehnXqho8Fuog' target='_blank' class='url'>https://pan.baidu.com/s/12enOZqbB96ehnXqho8Fuog</a><span> 提取码：lehi</span>
+<span>2019千锋Linux教程-私有云运维实战 </span><a href='https://pan.baidu.com/s/1WHl8oHEe2v2dl2F5-vGrqw' target='_blank' class='url'>https://pan.baidu.com/s/1WHl8oHEe2v2dl2F5-vGrqw</a><span> 提取码：odcr</span>
+<span>千锋Linux教程-MySQL DBA从入门到精通 </span><a href='https://pan.baidu.com/s/1bWXdCq7ymnHMrIkhvXGOtQ' target='_blank' class='url'>https://pan.baidu.com/s/1bWXdCq7ymnHMrIkhvXGOtQ</a><span> 提取码：u6ai</span>
+<span>千锋Linux教程-Linux和数据库实战 </span><a href='https://pan.baidu.com/s/18l6_iZY6Qv5HYMejEsa4ew' target='_blank' class='url'>https://pan.baidu.com/s/18l6_iZY6Qv5HYMejEsa4ew</a><span> 提取码：h9z9</span>
+<span>--高级</span>
+<span>Linux大型网站高并发架构及自动化运维项目（六）【2019千锋】</span><a href='https://pan.baidu.com/s/1Mdc8YVhFLBoGOGZEzvDzLA' target='_blank' class='url'>https://pan.baidu.com/s/1Mdc8YVhFLBoGOGZEzvDzLA</a><span> 提取码：nh37</span>
+<span>2019千锋Linux教程-Web安全渗透全套教程 </span><a href='https://pan.baidu.com/s/1CJbNa86fPEV_-mR-OL74qA' target='_blank' class='url'>https://pan.baidu.com/s/1CJbNa86fPEV_-mR-OL74qA</a><span> 提取码：8ucq</span>
+<span>2019千锋Linux教程-Python自动化运维入门 </span><a href='https://pan.baidu.com/s/1LyGz9fZoJRWtiE0FSGnJrw' target='_blank' class='url'>https://pan.baidu.com/s/1LyGz9fZoJRWtiE0FSGnJrw</a><span> 提取码：gfqu</span>
+<span>2019千锋Linux教程-Web安全渗透攻防项目实战 </span><a href='https://pan.baidu.com/s/1z8HjSsGHOde3BNu_CJQfLQ' target='_blank' class='url'>https://pan.baidu.com/s/1z8HjSsGHOde3BNu_CJQfLQ</a><span> 提取码：5yz4</span>
+<span>--工具</span>
+<span>Linux云计算相关软件 </span><a href='https://pan.baidu.com/s/10WhhPaC1ZIPGRKsNTiPD-Q' target='_blank' class='url'>https://pan.baidu.com/s/10WhhPaC1ZIPGRKsNTiPD-Q</a><span> 提取码：frta</span></p><p><span>马哥教育 Linux 运维视频教程全集（初级、中级和高级，共 200 讲，73 GB）：</span>
+<span>链接：</span><a href='http://pan.baidu.com/s/1nv3N537' target='_blank' class='url'>http://pan.baidu.com/s/1nv3N537</a><span>   密码：4i10</span>
+<span>链接：</span><a href='https://pan.baidu.com/s/1VuX8vGulyqgoUZyYowcXJw' target='_blank' class='url'>https://pan.baidu.com/s/1VuX8vGulyqgoUZyYowcXJw</a><span>    密码：aw4t</span>
+<span>链接：</span><a href='https://pan.baidu.com/s/1405p15TZryi4mOMPe2hBwg' target='_blank' class='url'>https://pan.baidu.com/s/1405p15TZryi4mOMPe2hBwg</a><span>    密码：6y3u</span>
+<span>链接：</span><a href='https://pan.baidu.com/s/1nvR60ch' target='_blank' class='url'>https://pan.baidu.com/s/1nvR60ch</a><span>    密码：dist</span>
+<span>链接：</span><a href='https://pan.baidu.com/s/1pDpHifhIzcyzrhxLaHh91w' target='_blank' class='url'>https://pan.baidu.com/s/1pDpHifhIzcyzrhxLaHh91w</a></p><p><span>马哥教育「就业班+架构班」全套视频教程（61天课程完整版）：</span>
+<span>链接：</span><a href='https://pan.baidu.com/s/1C35TMCl-5rWGWC3jHDMZ9w' target='_blank' class='url'>https://pan.baidu.com/s/1C35TMCl-5rWGWC3jHDMZ9w</a><span>    密码：pf83</span>
+<span>链接：</span><a href='https://pan.baidu.com/s/1rKQJFouFZI1w9jJDareboQ' target='_blank' class='url'>https://pan.baidu.com/s/1rKQJFouFZI1w9jJDareboQ</a><span>    密码：2j88</span>
+<span>就业班链接：</span><a href='https://pan.baidu.com/s/1JVUpJcGd91gsYSMMD0LG_A' target='_blank' class='url'>https://pan.baidu.com/s/1JVUpJcGd91gsYSMMD0LG_A</a><span>    密码：wf9q</span>
+<span>架构班链接：</span><a href='https://pan.baidu.com/s/1H2jLfQGzZghY4aOtmAiYPQ' target='_blank' class='url'>https://pan.baidu.com/s/1H2jLfQGzZghY4aOtmAiYPQ</a><span>    密码：7ka2</span></p><p><span>老男孩 Linux 全套视频教程（共 565 集）</span>
+<span>链接：</span><a href='https://pan.baidu.com/s/1iFedKdOKLyJS6rjqmBk9UQ' target='_blank' class='url'>https://pan.baidu.com/s/1iFedKdOKLyJS6rjqmBk9UQ</a><span>    密码：ptce</span>
+<span>链接：</span><a href='https://pan.baidu.com/s/1lXtfMwPY-kQXS8D6kV7aqw' target='_blank' class='url'>https://pan.baidu.com/s/1lXtfMwPY-kQXS8D6kV7aqw</a><span>    密码：t942</span>
+<span>链接：</span><a href='https://pan.baidu.com/s/1LXmFowZxhJe2vzcSBo8EAg' target='_blank' class='url'>https://pan.baidu.com/s/1LXmFowZxhJe2vzcSBo8EAg</a><span>    密码：b7ie</span>
+<span>链接：</span><a href='https://pan.baidu.com/s/1BQE6PB5qq-8Jyj53MCAHGQ' target='_blank' class='url'>https://pan.baidu.com/s/1BQE6PB5qq-8Jyj53MCAHGQ</a><span>    密码：3ili</span>
+<span>链接：</span><a href='https://pan.baidu.com/s/1hrFbvhi' target='_blank' class='url'>https://pan.baidu.com/s/1hrFbvhi</a></p><p><span>老男孩脱产班Linux运维培训第51期全套视频教程（65天课程）（啥也不多说，看了能直接就业的那种）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1Ksk1uSOVuGTgeznMzAy36g' target='_blank' class='url'>https://pan.baidu.com/s/1Ksk1uSOVuGTgeznMzAy36g</a><span>    提取密码：z2ag</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1pV8QS_rnqcoO59uFpWG4bw' target='_blank' class='url'>https://pan.baidu.com/s/1pV8QS_rnqcoO59uFpWG4bw</a><span>    提取密码：x91f</span></p><p><span>2019最新老男孩Linux云计算高端运维课程（40天课程）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1zWM6jNlfsVN1TYOIqA5dyA' target='_blank' class='url'>https://pan.baidu.com/s/1zWM6jNlfsVN1TYOIqA5dyA</a><span>    提取密码：hwdv</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1am3ri4TgJFLYX_3PsyY8Dw' target='_blank' class='url'>https://pan.baidu.com/s/1am3ri4TgJFLYX_3PsyY8Dw</a><span>    提取密码：nmuw</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/15FpynYU-in0oHgPIDZ_pVw' target='_blank' class='url'>https://pan.baidu.com/s/15FpynYU-in0oHgPIDZ_pVw</a><span>    提取密码：xnt7</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1Jkc1KWput8AX5YTQ4tcWtQ' target='_blank' class='url'>https://pan.baidu.com/s/1Jkc1KWput8AX5YTQ4tcWtQ</a><span>    提取密码：th2k</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1aCx276lUtzoY_U9Kb5yCIg' target='_blank' class='url'>https://pan.baidu.com/s/1aCx276lUtzoY_U9Kb5yCIg</a><span>    提取密码：j0ee</span></p><p>&nbsp;</p><p><span>------------------ Linux/Shell入门系列 ------------------</span></p><p><span>快速上手Linux，玩转典型应用（慕课网出品）</span>
+<span>课程内容通俗易懂，非常容易理解，并且注重实践，学完以后可以掌握基本的运维能力。课程内容包括Linux简介、CentOS、远程连接SSH专题、Linux常用命令、Web服务器的搭建、数据库的安装和设置、缓存服务、 Git安装和使用、Php框架（TP5+Lavaral+Yii2.0）环境配置、Java运行环境配置、Python运行环境、Linux服务管理、监控神器Zabbix。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1u09-YcgwMFB6qVgTl_aWXA' target='_blank' class='url'>https://pan.baidu.com/s/1u09-YcgwMFB6qVgTl_aWXA</a><span>    提取密码：88g0</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1mitcCtE' target='_blank' class='url'>https://pan.baidu.com/s/1mitcCtE</a><span>    提取密码：fgmi</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1dFvYA69' target='_blank' class='url'>https://pan.baidu.com/s/1dFvYA69</a><span>    提取密码：mofm</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/17h30_9zQlLkdDzLcH04HZw' target='_blank' class='url'>https://pan.baidu.com/s/17h30_9zQlLkdDzLcH04HZw</a><span>    提取密码：c57k</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/11qWVJfZxPz3dCX3ZGBJ3QQ' target='_blank' class='url'>https://pan.baidu.com/s/11qWVJfZxPz3dCX3ZGBJ3QQ</a></p><p><span>兄弟连Linux入门视频教程（非常经典，共16章）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/18aJIp3buuMKcBkb_bj1LWg' target='_blank' class='url'>https://pan.baidu.com/s/18aJIp3buuMKcBkb_bj1LWg</a><span>    提取密码：zeha</span></p><p><span>京峰教育Linux+Shell从入门到精通系列视频教程</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1Zh60tJPr0VkddsX-MYIWqA' target='_blank' class='url'>https://pan.baidu.com/s/1Zh60tJPr0VkddsX-MYIWqA</a><span>    提取密码：pd3p</span></p><p><span>标杆徐 2018 Shell高级脚本自动化编程实战</span>
+<span>本课程涵盖企业内部用于生产环境中的脚本，以实战+编写代码思路进行教学，让学生掌握Shell编程技巧，从入门到精通Shell脚本。本套课程从实际项目案例出发, 近100个Shell实例讲解，由浅入深，循序渐进，带你玩转Shell编程的方方面面。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1Cr5lHnCZ5izdWwdrnrTONg' target='_blank' class='url'>https://pan.baidu.com/s/1Cr5lHnCZ5izdWwdrnrTONg</a><span>    提取密码：hg7a</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1T8CEIlxpov57lCyBKuu9iw' target='_blank' class='url'>https://pan.baidu.com/s/1T8CEIlxpov57lCyBKuu9iw</a><span>    提取密码：w0dr</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1tZny8bkwVKhzeqgo6-wb-w' target='_blank' class='url'>https://pan.baidu.com/s/1tZny8bkwVKhzeqgo6-wb-w</a><span>    提取密码：utve</span></p><p><span>2019最新Linux就该这么学第20期视频</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1kNM32c4503du6T_ylN8BrQ' target='_blank' class='url'>https://pan.baidu.com/s/1kNM32c4503du6T_ylN8BrQ</a><span>    提取密码：o3on</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1irwgiHt_LYigzYusKAG-gQ' target='_blank' class='url'>https://pan.baidu.com/s/1irwgiHt_LYigzYusKAG-gQ</a><span>    提取密码：4izk</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/10HXFVhOpQs7NjEmFlFd1tA' target='_blank' class='url'>https://pan.baidu.com/s/10HXFVhOpQs7NjEmFlFd1tA</a><span>    提取密码：ec7k</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1DAcx2_2xN50_SKcBNba1fA' target='_blank' class='url'>https://pan.baidu.com/s/1DAcx2_2xN50_SKcBNba1fA</a><span>    提取密码：4en1</span></p><p><span>韩顺平一周学会Linux实战（共39集）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1aGRDttgV4dVH5RxjnJsrqQ' target='_blank' class='url'>https://pan.baidu.com/s/1aGRDttgV4dVH5RxjnJsrqQ</a><span>    提取密码：dfr5</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1bo7bd3T' target='_blank' class='url'>https://pan.baidu.com/s/1bo7bd3T</a><span>    提取密码：wccr</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1QV8NCeMa9L4m6aGCw2VhWQ' target='_blank' class='url'>https://pan.baidu.com/s/1QV8NCeMa9L4m6aGCw2VhWQ</a>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1BYsLS8WIyGKALc4F4JVuHw' target='_blank' class='url'>https://pan.baidu.com/s/1BYsLS8WIyGKALc4F4JVuHw</a></p><p><span>烨子女神手把手教你学Linux系统（高清版）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1316QCiSjiIn6DM_8N1WKYw' target='_blank' class='url'>https://pan.baidu.com/s/1316QCiSjiIn6DM_8N1WKYw</a><span>    提取密码：xwg1</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1yzTVAzh1gPBaSVgELiOSnA' target='_blank' class='url'>https://pan.baidu.com/s/1yzTVAzh1gPBaSVgELiOSnA</a><span>    提取密码：skbe</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/19isUT-yriTeSN9YzRqixgw' target='_blank' class='url'>https://pan.baidu.com/s/19isUT-yriTeSN9YzRqixgw</a><span>    提取密码：kl3k</span></p><p><span>Linux Shell写俄罗斯方块视频教程</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1kTsvKiV' target='_blank' class='url'>http://pan.baidu.com/s/1kTsvKiV</a><span>    提取密码：s8ck</span></p><p>&nbsp;</p><p><span>------------------ Linux专题讲解 ------------------</span></p><p><span>黑马程序员Linux运维工作场景解决方案零基础到就业</span>
+<a href='https://pan.baidu.com/s/1WIwVff4_kGcxRR-YLeVi9Q' target='_blank' class='url'>https://pan.baidu.com/s/1WIwVff4_kGcxRR-YLeVi9Q</a></p><p><span>RHCE认证（红帽认证）视频教程（104集全）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1dDIWuRZ' target='_blank' class='url'>http://pan.baidu.com/s/1dDIWuRZ</a><span>    提取密码：vsmb</span></p><p><span>Linux开源集群架构系列入门视频教程（31集）</span>
+<span>百度网盘：</span><a href='http://pan.baidu.com/s/1BAUce' target='_blank' class='url'>http://pan.baidu.com/s/1BAUce</a><span>    提取密码：3nqi</span></p><p><span>达内教育--DNS服务器的搭建（共16集）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/16n31x4SvQ8OUkaWvNlrygw' target='_blank' class='url'>https://pan.baidu.com/s/16n31x4SvQ8OUkaWvNlrygw</a><span>    提取密码：fcy9</span></p><p>&nbsp;</p><h1><a name="qtmfc" class="md-header-anchor"></a><span>QT/MFC</span></h1><p><span>------------------ Qt视频教程汇总 ------------------</span></p><p><span>传智播客（黑马程序员）Qt界面开发全套视频教程（6天课程）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1wpjnVzcQwGCAtd46zCNAnQ' target='_blank' class='url'>https://pan.baidu.com/s/1wpjnVzcQwGCAtd46zCNAnQ</a><span>    提取密码：clsy</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1_ChmB_fE7k8cZhrPEStIWA' target='_blank' class='url'>https://pan.baidu.com/s/1_ChmB_fE7k8cZhrPEStIWA</a><span>    提取密码：7fkm</span></p><p><span>Qt5.9跨平台界面编程及其原理（无废话，纯干货）</span>
+<span>百度网盘1：</span><a href='https://pan.baidu.com/s/1TimepJsTtwKSOtke3jjFXQ' target='_blank' class='url'>https://pan.baidu.com/s/1TimepJsTtwKSOtke3jjFXQ</a><span>    提取密码：j6fd    解压密码：akjhfHFHASF131gAAasaasad</span>
+<span>百度网盘2：</span><a href='https://pan.baidu.com/s/1ylonhEl9NNisVgMry3ncQg' target='_blank' class='url'>https://pan.baidu.com/s/1ylonhEl9NNisVgMry3ncQg</a><span>    解压密码：21nb</span></p><p><span>丁林松 Qt 高级教程（54集全）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1bq6Bb0z' target='_blank' class='url'>https://pan.baidu.com/s/1bq6Bb0z</a><span>    解压密码：jwdw </span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1W13QmOXw-G17lIVGVJAiFg' target='_blank' class='url'>https://pan.baidu.com/s/1W13QmOXw-G17lIVGVJAiFg</a><span>    解压密码：2c4q</span></p><p><span>Qt从入门到进阶一站式学习（多套视频，包含完整学习线路）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1f0fe-531VdsUiBR9Prz0hA' target='_blank' class='url'>https://pan.baidu.com/s/1f0fe-531VdsUiBR9Prz0hA</a><span>    百度网盘：mpyo</span></p><p><span>小韩老师Qt5入门课程</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1WBgs6xtUvjkBbE9A3X6-Bg' target='_blank' class='url'>https://pan.baidu.com/s/1WBgs6xtUvjkBbE9A3X6-Bg</a><span>    百度网盘：68ld</span></p><p><span>QT基础学习视频教程32讲-棉花虫子主讲</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1boABvkz' target='_blank' class='url'>https://pan.baidu.com/s/1boABvkz</a><span>    百度网盘：63rx </span></p><p><span>QT跨平台小游戏开发—黑白棋</span>
+<span>课程内容包括：棋盘坐标设置、普通落子、吃子算法的实现、实现简单人机对战和QT跨平台演示。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1cQGBT6l4-J288hcll3O-hw' target='_blank' class='url'>https://pan.baidu.com/s/1cQGBT6l4-J288hcll3O-hw</a><span>    解压密码：h4vh</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1nvbWVix' target='_blank' class='url'>https://pan.baidu.com/s/1nvbWVix</a></p><p>&nbsp;</p><p><span>------------------ MFC视频教程汇总 ------------------</span></p><p><span>传智播客MFC教程视频（3天课程）</span>
+<span>第一天：Win消息机制、SDK编程基础；第二天：对话框、常用控件、文档和视图；第三天：综合案例：销售信息管理系统</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1v-WGz4KE48UDT5rmT9E-sw' target='_blank' class='url'>https://pan.baidu.com/s/1v-WGz4KE48UDT5rmT9E-sw</a><span>    提取密码：lty2</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1fH4CJMjp26W1ugr0NmSOfA' target='_blank' class='url'>https://pan.baidu.com/s/1fH4CJMjp26W1ugr0NmSOfA</a><span>    提取密码：at2f</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1geYdec7' target='_blank' class='url'>https://pan.baidu.com/s/1geYdec7</a></p><p><span>VC++软件工程师高端培训（服务器端开发方向）（332课全）</span>
+<span>课程内容包括C++、XML编程、Windows编程、网络编程、数据库编程、MFC开发。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1PrD6gYCzyghDOKYiVXDvSw' target='_blank' class='url'>https://pan.baidu.com/s/1PrD6gYCzyghDOKYiVXDvSw</a><span>    提取密码：t61d</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/19xVxM0ALKqJdnoGSLt8yyQ' target='_blank' class='url'>https://pan.baidu.com/s/19xVxM0ALKqJdnoGSLt8yyQ</a><span>    提取密码：6aum</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1hqtIQsG' target='_blank' class='url'>https://pan.baidu.com/s/1hqtIQsG</a></p><p><span>MFC客户端开发视频教程（38天）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1-xjb_DUqt-hNiDpP70eEQA' target='_blank' class='url'>https://pan.baidu.com/s/1-xjb_DUqt-hNiDpP70eEQA</a><span>    提取密码：6whf</span></p><p><span>猎豹网校MFC从入门到提高（85讲）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1DAhJCodYiQ2LT9LhajHb1g' target='_blank' class='url'>https://pan.baidu.com/s/1DAhJCodYiQ2LT9LhajHb1g</a><span>    提取密码：eluw</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1ONZhIKwyqfI11NNu3woPyw' target='_blank' class='url'>https://pan.baidu.com/s/1ONZhIKwyqfI11NNu3woPyw</a><span>    提取密码：3zuk</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1ge4kkWN' target='_blank' class='url'>https://pan.baidu.com/s/1ge4kkWN</a>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1boPOu9x' target='_blank' class='url'>https://pan.baidu.com/s/1boPOu9x</a></p><p><span>吕鑫：VC++就业培训宝典之MFC视频教程</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1_aueUDsYsWqPyQUIhOFeSA' target='_blank' class='url'>https://pan.baidu.com/s/1_aueUDsYsWqPyQUIhOFeSA</a><span>    提取密码：qai3</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1SFNMkhpiacAZd8j5knqlaA' target='_blank' class='url'>https://pan.baidu.com/s/1SFNMkhpiacAZd8j5knqlaA</a><span>    提取密码：hdo2</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1dEmS9NV' target='_blank' class='url'>https://pan.baidu.com/s/1dEmS9NV</a></p><p><span>吕鑫 VS2015 MFC 从入门到精通教程（共118集）</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1qZgjLjhV43LImfUwVPY6VA' target='_blank' class='url'>https://pan.baidu.com/s/1qZgjLjhV43LImfUwVPY6VA</a><span>    提取密码：r49v</span></p><p><span>吕鑫Windows开发一站式学习（基于VS2015）（非常经典和全面）</span>
+<span>课程内容包括C语言、C++、MFC、Linux开发、数据库开发、Cocosd。</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1jIzjBvg' target='_blank' class='url'>https://pan.baidu.com/s/1jIzjBvg</a><span>    提取密码：6rkh</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1vyc4FQuSSfrQtb__TSq9uQ' target='_blank' class='url'>https://pan.baidu.com/s/1vyc4FQuSSfrQtb__TSq9uQ</a><span>    提取密码：3x8i</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/17BlDEDhlrsch5fwu7Op7lQ' target='_blank' class='url'>https://pan.baidu.com/s/17BlDEDhlrsch5fwu7Op7lQ</a><span>    提取密码：cz37</span>
+<span>百度网盘：</span><a href='https://pan.baidu.com/s/1kVimHin' target='_blank' class='url'>https://pan.baidu.com/s/1kVimHin</a><span>    提取密码：ngn2</span></p></div>
+</body>
+</html>
