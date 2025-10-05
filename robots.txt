@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /about/
+Allow: /tags/
+Allow: /links/
+
+Disallow: /lib/
+Disallow: /js/
+Disallow: /css/
+Disallow: /img/
+Disallow: /vendors/
+Disallow: /CNAME
+Disallow: /googleffb1f2f9d451faff.html
+Disallow: /shenma-site-verification.txt
+Disallow: /README.md
+
+
+
+Sitemap: https://www.aimtao.net/baidusitemap.xml
