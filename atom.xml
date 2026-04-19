@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author>
+    <name>AimTao</name>
+  </author>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <icon>https://hutu0.aimtao.net/site/icon.jpeg</icon>
+  <id>https://www.aimtao.net/</id>
+  <link href="https://www.aimtao.net/" rel="alternate"/>
+  <link href="https://www.aimtao.net/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, AimTao</rights>
+  <subtitle>AimTao</subtitle>
+  <title>AimTao</title>
+  <updated>2025-09-02T19:44:00.000Z</updated>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Solution" scheme="https://www.aimtao.net/categories/Solution/"/>
+    <category term="Docker" scheme="https://www.aimtao.net/tags/Docker/"/>
+    <category term="Battery-Historian" scheme="https://www.aimtao.net/tags/Battery-Historian/"/>
+    <id>https://www.aimtao.net/modified-container/</id>
+    <link href="https://www.aimtao.net/modified-container/"/>
+    <published>2025-09-02T19:44:00.000Z</published>
+    <summary>本文演示了一种对于容器进行快速二开的方法。</summary>
+    <title>基于 docker 容器进行修改并成新镜像</title>
+    <updated>2025-09-02T19:44:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Solution" scheme="https://www.aimtao.net/categories/Solution/"/>
+    <category term="Docker" scheme="https://www.aimtao.net/tags/Docker/"/>
+    <category term="Windows" scheme="https://www.aimtao.net/tags/Windows/"/>
+    <category term="WSL" scheme="https://www.aimtao.net/tags/WSL/"/>
+    <id>https://www.aimtao.net/wsl-proxy/</id>
+    <link href="https://www.aimtao.net/wsl-proxy/"/>
+    <published>2025-08-30T19:44:00.000Z</published>
+    <summary>Win11+WSL2+远程开发这一套真舒服~</summary>
+    <title>配置 Win+WSL 环境下的网络代理</title>
+    <updated>2025-08-30T19:44:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Solution" scheme="https://www.aimtao.net/categories/Solution/"/>
+    <category term="Network" scheme="https://www.aimtao.net/tags/Network/"/>
+    <category term="Docker" scheme="https://www.aimtao.net/tags/Docker/"/>
+    <id>https://www.aimtao.net/docker-network/</id>
+    <link href="https://www.aimtao.net/docker-network/"/>
+    <published>2024-11-25T03:59:37.000Z</published>
+    <summary>本文通过网桥的方式，为容器指定静态IP，并实现宿主机与容器相互访问。</summary>
+    <title>指定 docker 容器的网段和IP</title>
+    <updated>2024-11-25T03:59:37.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Implement From Scratch" scheme="https://www.aimtao.net/categories/Implement-From-Scratch/"/>
+    <category term="Go" scheme="https://www.aimtao.net/tags/Go/"/>
+    <category term="Framework" scheme="https://www.aimtao.net/tags/Framework/"/>
+    <category term="RPC" scheme="https://www.aimtao.net/tags/RPC/"/>
+    <id>https://www.aimtao.net/7days-rpc/</id>
+    <link href="https://www.aimtao.net/7days-rpc/"/>
+    <published>2024-10-18T14:36:00.000Z</published>
+    <summary>从零实现标准库 net/rpc，新增了协议交换、注册中心、服务发现、负载均衡、超时处理等特性。</summary>
+    <title>从零实现系列｜RPC</title>
+    <updated>2024-10-18T14:36:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Coding" scheme="https://www.aimtao.net/categories/Coding/"/>
+    <category term="Go" scheme="https://www.aimtao.net/tags/Go/"/>
+    <category term="Mutex" scheme="https://www.aimtao.net/tags/Mutex/"/>
+    <id>https://www.aimtao.net/copy-lock-value/</id>
+    <link href="https://www.aimtao.net/copy-lock-value/"/>
+    <published>2023-10-06T05:06:00.000Z</published>
+    <summary>
+      <![CDATA[<p>一个报错引起的思考。</p>]]>
+    </summary>
+    <title>Golang 中返回含锁对象的风险</title>
+    <updated>2023-10-06T05:06:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Implement From Scratch" scheme="https://www.aimtao.net/categories/Implement-From-Scratch/"/>
+    <category term="Go" scheme="https://www.aimtao.net/tags/Go/"/>
+    <category term="Cache" scheme="https://www.aimtao.net/tags/Cache/"/>
+    <id>https://www.aimtao.net/7days-cache/</id>
+    <link href="https://www.aimtao.net/7days-cache/"/>
+    <published>2023-05-12T16:24:00.000Z</published>
+    <summary>本文逐步实现了一个分布式缓存系统，涵盖LRU缓存淘汰策略、单机并发控制、HTTP服务接口及一致性哈希算法。</summary>
+    <title>从零实现系列｜分布式缓存</title>
+    <updated>2023-05-12T16:24:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Implement From Scratch" scheme="https://www.aimtao.net/categories/Implement-From-Scratch/"/>
+    <category term="Go" scheme="https://www.aimtao.net/tags/Go/"/>
+    <category term="Framework" scheme="https://www.aimtao.net/tags/Framework/"/>
+    <id>https://www.aimtao.net/7days-web/</id>
+    <link href="https://www.aimtao.net/7days-web/"/>
+    <published>2023-02-25T14:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>本文通过回答关键问题的方式，记录阅读 <a href="https://geektutu.com/post/gee.html">gee</a> 代码过程中的思考，并做出补充和改进，其中有所借鉴 gin 框架。</p>]]>
+    </summary>
+    <title>从零实现系列｜web 框架</title>
+    <updated>2023-02-25T14:00:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="Go" scheme="https://www.aimtao.net/tags/Go/"/>
+    <category term="Gin" scheme="https://www.aimtao.net/tags/Gin/"/>
+    <id>https://www.aimtao.net/gin/</id>
+    <link href="https://www.aimtao.net/gin/"/>
+    <published>2022-08-25T14:39:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>本文探讨 Gin 的一些用法和源码。</p>
+</blockquote>]]>
+    </summary>
+    <title>学习笔记｜Gin</title>
+    <updated>2022-08-25T14:39:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="Go" scheme="https://www.aimtao.net/tags/Go/"/>
+    <category term="微服务" scheme="https://www.aimtao.net/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    <category term="GORM" scheme="https://www.aimtao.net/tags/GORM/"/>
+    <id>https://www.aimtao.net/gorm/</id>
+    <link href="https://www.aimtao.net/gorm/"/>
+    <published>2022-06-30T16:57:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>本文为实践 gorm 过程中的笔记，也是写给自己的简明教程（看书从厚到薄第一步）。官方文档写的已经很详细了，建议大家伙先查官方文档。</p>
+</blockquote>]]>
+    </summary>
+    <title>学习笔记｜GORM</title>
+    <updated>2022-06-30T16:57:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Practice" scheme="https://www.aimtao.net/categories/Practice/"/>
+    <category term="macOS" scheme="https://www.aimtao.net/tags/macOS/"/>
+    <id>https://www.aimtao.net/worth-sharing/</id>
+    <link href="https://www.aimtao.net/worth-sharing/"/>
+    <published>2022-06-26T10:05:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>好产品值得推广，持续更新。</p>
+</blockquote>]]>
+    </summary>
+    <title>值得分享的软件和技巧</title>
+    <updated>2022-06-26T10:05:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Kernel" scheme="https://www.aimtao.net/categories/Kernel/"/>
+    <category term="Linux" scheme="https://www.aimtao.net/tags/Linux/"/>
+    <category term="kernel" scheme="https://www.aimtao.net/tags/kernel/"/>
+    <id>https://www.aimtao.net/memory-management/</id>
+    <link href="https://www.aimtao.net/memory-management/"/>
+    <published>2022-06-17T07:43:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>本文结合了诸多资料，以更加结构化的方式构建内存管理的知识体系，从虚拟内存布局到物理内存分配，全面地描述了内存管理中最重要的三件事。</p>
+</blockquote>]]>
+    </summary>
+    <title>Linux 内核｜内存管理</title>
+    <updated>2022-06-17T07:43:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="Go" scheme="https://www.aimtao.net/tags/Go/"/>
+    <category term="RPC" scheme="https://www.aimtao.net/tags/RPC/"/>
+    <category term="微服务" scheme="https://www.aimtao.net/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    <id>https://www.aimtao.net/rpc/</id>
+    <link href="https://www.aimtao.net/rpc/"/>
+    <published>2022-05-27T00:32:00.000Z</published>
+    <summary>
+      <![CDATA[<p>本文回答了 RPC 是什么、为什么使用 RPC 等问题，并详细探讨了 protobuf 协议和 gRPC 框架。</p>]]>
+    </summary>
+    <title>微服务｜RPC/gRPC</title>
+    <updated>2023-01-12T17:11:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Kernel" scheme="https://www.aimtao.net/categories/Kernel/"/>
+    <category term="Linux" scheme="https://www.aimtao.net/tags/Linux/"/>
+    <category term="Kernel" scheme="https://www.aimtao.net/tags/Kernel/"/>
+    <id>https://www.aimtao.net/system-call/</id>
+    <link href="https://www.aimtao.net/system-call/"/>
+    <published>2022-04-12T10:01:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>本文以最常见的系统调用 open， 打开一个文件为线索，展示 32/64 位系统调用的实现方式。</p>
+</blockquote>]]>
+    </summary>
+    <title>Linux 内核｜系统调用</title>
+    <updated>2022-04-12T10:01:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Kernel" scheme="https://www.aimtao.net/categories/Kernel/"/>
+    <category term="Linux" scheme="https://www.aimtao.net/tags/Linux/"/>
+    <category term="Kernel" scheme="https://www.aimtao.net/tags/Kernel/"/>
+    <id>https://www.aimtao.net/init/</id>
+    <link href="https://www.aimtao.net/init/"/>
+    <published>2022-01-19T13:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>在 Linux 内核启动后，完成了实模式到保护模式的切换，并做好了各种准备工作。接下来进入内核初始化，我们主要关注初始化的流程。</p>
+</blockquote>]]>
+    </summary>
+    <title>Linux 内核｜初始化</title>
+    <updated>2022-01-19T13:00:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="前端" scheme="https://www.aimtao.net/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="TypeScript" scheme="https://www.aimtao.net/tags/TypeScript/"/>
+    <id>https://www.aimtao.net/typescript/</id>
+    <link href="https://www.aimtao.net/typescript/"/>
+    <published>2021-12-26T07:34:00.000Z</published>
+    <summary>TypeScript 是一种基于 JavaScript 的强类型编程语言。</summary>
+    <title>学习笔记｜TypeScript</title>
+    <updated>2021-12-26T07:34:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Practice" scheme="https://www.aimtao.net/categories/Practice/"/>
+    <category term="Linux" scheme="https://www.aimtao.net/tags/Linux/"/>
+    <category term="定时任务" scheme="https://www.aimtao.net/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
+    <id>https://www.aimtao.net/crontab/</id>
+    <link href="https://www.aimtao.net/crontab/"/>
+    <published>2021-12-19T11:04:00.000Z</published>
+    <summary>Linux 系统启动时，init 进程会启动 cron 进程，corn 会执行定时任务表 crontab 中的定时任务。所以只要系统开机，就会自动执行定时任务。</summary>
+    <title>Crontab｜Linux 的定时任务</title>
+    <updated>2021-12-19T11:04:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Practice" scheme="https://www.aimtao.net/categories/Practice/"/>
+    <category term="图床" scheme="https://www.aimtao.net/tags/%E5%9B%BE%E5%BA%8A/"/>
+    <category term="webp" scheme="https://www.aimtao.net/tags/webp/"/>
+    <id>https://www.aimtao.net/img-to-webp/</id>
+    <link href="https://www.aimtao.net/img-to-webp/"/>
+    <published>2021-10-07T12:25:00.000Z</published>
+    <summary>是时候全站使用 webp 了。</summary>
+    <title>全站 webp 最佳实践</title>
+    <updated>2022-07-03T07:00:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Life" scheme="https://www.aimtao.net/categories/Life/"/>
+    <category term="随想" scheme="https://www.aimtao.net/tags/%E9%9A%8F%E6%83%B3/"/>
+    <category term="质能方程" scheme="https://www.aimtao.net/tags/%E8%B4%A8%E8%83%BD%E6%96%B9%E7%A8%8B/"/>
+    <id>https://www.aimtao.net/mass-energy-equation/</id>
+    <link href="https://www.aimtao.net/mass-energy-equation/"/>
+    <published>2021-09-20T15:47:00.000Z</published>
+    <summary>
+      <![CDATA[<p>闲暇看了李永乐老师的视频，记录一下自己的想法，仅当娱乐。</p>]]>
+    </summary>
+    <title>质能方程推导的一点点想法</title>
+    <updated>2021-09-20T15:47:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Kernel" scheme="https://www.aimtao.net/categories/Kernel/"/>
+    <category term="Linux" scheme="https://www.aimtao.net/tags/Linux/"/>
+    <category term="Kernel" scheme="https://www.aimtao.net/tags/Kernel/"/>
+    <id>https://www.aimtao.net/boot/</id>
+    <link href="https://www.aimtao.net/boot/"/>
+    <published>2021-09-06T02:00:00.000Z</published>
+    <summary>电脑按下开机键发生了什么？</summary>
+    <title>Linux 内核｜启动</title>
+    <updated>2021-09-19T02:00:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="Git" scheme="https://www.aimtao.net/tags/Git/"/>
+    <category term="repo" scheme="https://www.aimtao.net/tags/repo/"/>
+    <id>https://www.aimtao.net/repo/</id>
+    <link href="https://www.aimtao.net/repo/"/>
+    <published>2021-08-23T15:32:00.000Z</published>
+    <summary>repo 是 python 脚本，为便于管理一个项目中的多个 git 仓库。</summary>
+    <title>学习笔记｜repo</title>
+    <updated>2021-08-23T15:32:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Kernel" scheme="https://www.aimtao.net/categories/Kernel/"/>
+    <category term="Linux" scheme="https://www.aimtao.net/tags/Linux/"/>
+    <category term="Kernel" scheme="https://www.aimtao.net/tags/Kernel/"/>
+    <id>https://www.aimtao.net/interrupt/</id>
+    <link href="https://www.aimtao.net/interrupt/"/>
+    <published>2021-08-11T02:00:29.000Z</published>
+    <summary>中断是系统用来响应硬件设备请求的一种机制，操作系统收到硬件的中断请求，会打断正在执行的进程，然后调用内核中的中断处理程序来响应请求。</summary>
+    <title>Linux 内核｜中断</title>
+    <updated>2021-08-12T12:14:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="XML" scheme="https://www.aimtao.net/tags/XML/"/>
+    <id>https://www.aimtao.net/xml/</id>
+    <link href="https://www.aimtao.net/xml/"/>
+    <published>2021-08-08T14:45:29.000Z</published>
+    <summary>使用 XML 格式描述，具有可读性和可维护性；而 JSON 比 XML 更轻巧。</summary>
+    <title>学习笔记｜XML 与 JSON</title>
+    <updated>2021-08-09T17:07:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="Linux" scheme="https://www.aimtao.net/tags/Linux/"/>
+    <category term="Shell" scheme="https://www.aimtao.net/tags/Shell/"/>
+    <id>https://www.aimtao.net/linux-shell/</id>
+    <link href="https://www.aimtao.net/linux-shell/"/>
+    <published>2021-05-07T15:36:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>本文在 <a href="https://www.aimtao.net/linux/">linux 命令</a>的基础上，具体描述 Shell 脚本的相关知识。</p>
+</blockquote>]]>
+    </summary>
+    <title>学习笔记｜Shell</title>
+    <updated>2021-07-14T07:34:32.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Life" scheme="https://www.aimtao.net/categories/Life/"/>
+    <category term="随想" scheme="https://www.aimtao.net/tags/%E9%9A%8F%E6%83%B3/"/>
+    <id>https://www.aimtao.net/meaning-of-life-and-donuts/</id>
+    <link href="https://www.aimtao.net/meaning-of-life-and-donuts/"/>
+    <published>2021-04-26T07:29:27.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>要爱生活，不要爱生活的意义；要爱具体的人，不要爱抽象的人。</p>
+</blockquote>]]>
+    </summary>
+    <title>人生意义与甜甜圈</title>
+    <updated>2021-04-26T07:29:27.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="Linux" scheme="https://www.aimtao.net/tags/Linux/"/>
+    <category term="C/C++" scheme="https://www.aimtao.net/tags/C-C/"/>
+    <category term="Socket" scheme="https://www.aimtao.net/tags/Socket/"/>
+    <id>https://www.aimtao.net/socket/</id>
+    <link href="https://www.aimtao.net/socket/"/>
+    <published>2021-03-04T02:46:34.000Z</published>
+    <summary>本文主要描述 Linux 网络编程相关知识，由浅入深地搭建多路转接服务器来完成 socket 通信。</summary>
+    <title>学习笔记｜Socket 与并发服务器</title>
+    <updated>2021-03-04T02:46:34.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Solution" scheme="https://www.aimtao.net/categories/Solution/"/>
+    <category term="Linux" scheme="https://www.aimtao.net/tags/Linux/"/>
+    <category term="VMware" scheme="https://www.aimtao.net/tags/VMware/"/>
+    <id>https://www.aimtao.net/VMware/</id>
+    <link href="https://www.aimtao.net/VMware/"/>
+    <published>2021-02-20T08:09:16.000Z</published>
+    <summary>本文基于 VMware 上的 Linux 环境讨论。</summary>
+    <title>VMware 使用 open-vm-tools 实时共享</title>
+    <updated>2021-02-20T08:09:16.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Life" scheme="https://www.aimtao.net/categories/Life/"/>
+    <category term="总结" scheme="https://www.aimtao.net/tags/%E6%80%BB%E7%BB%93/"/>
+    <id>https://www.aimtao.net/two-minute/</id>
+    <link href="https://www.aimtao.net/two-minute/"/>
+    <published>2020-12-14T10:48:00.000Z</published>
+    <summary>当你梦想着有所改变，很难避免让兴奋感接掌一切，到头来就会试图在太短的时间内做太多。抵抗这种倾向最有效的方法之一，就是运用两分钟法则。</summary>
+    <title>两分钟法则</title>
+    <updated>2020-12-14T10:48:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="Linux" scheme="https://www.aimtao.net/tags/Linux/"/>
+    <category term="C/C++" scheme="https://www.aimtao.net/tags/C-C/"/>
+    <id>https://www.aimtao.net/linux-system/</id>
+    <link href="https://www.aimtao.net/linux-system/"/>
+    <published>2020-12-13T13:07:29.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>本文从实际运用的角度出发，系统描述 Linux/C++ 开发相关知识。</p>
+</blockquote>]]>
+    </summary>
+    <title>学习笔记｜Linux 系统编程</title>
+    <updated>2020-12-14T13:07:29.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="Go" scheme="https://www.aimtao.net/tags/Go/"/>
+    <id>https://www.aimtao.net/go/</id>
+    <link href="https://www.aimtao.net/go/"/>
+    <published>2020-12-07T13:59:00.000Z</published>
+    <summary>不要通过共享内存来通信；通过通信来共享内存。</summary>
+    <title>学习笔记｜Go</title>
+    <updated>2020-09-19T13:28:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Coding" scheme="https://www.aimtao.net/categories/Coding/"/>
+    <category term="Sort" scheme="https://www.aimtao.net/tags/Sort/"/>
+    <id>https://www.aimtao.net/insert-sort/</id>
+    <link href="https://www.aimtao.net/insert-sort/"/>
+    <published>2020-10-28T15:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>今天有个同学问我一个考研题，链表的插入排序。</p>]]>
+    </summary>
+    <title>图解链表的插入排序</title>
+    <updated>2020-10-29T06:49:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="设计模式" scheme="https://www.aimtao.net/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://www.aimtao.net/design-pattern/</id>
+    <link href="https://www.aimtao.net/design-pattern/"/>
+    <published>2020-10-01T14:00:00.000Z</published>
+    <summary>本文用案例描述常见的面对对象设计原则和设计模式。</summary>
+    <title>学习笔记｜设计模式</title>
+    <updated>2020-10-01T14:00:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="简历" scheme="https://www.aimtao.net/tags/%E7%AE%80%E5%8E%86/"/>
+    <id>https://www.aimtao.net/enrypt-resume/</id>
+    <link href="https://www.aimtao.net/enrypt-resume/"/>
+    <published>2020-09-14T13:00:00.000Z</published>
+    <summary>This resume is encrypted.</summary>
+    <title>求职简历</title>
+    <updated>2020-09-14T13:50:29.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="算法" scheme="https://www.aimtao.net/tags/%E7%AE%97%E6%B3%95/"/>
+    <id>https://www.aimtao.net/algorithm-training/</id>
+    <link href="https://www.aimtao.net/algorithm-training/"/>
+    <published>2020-08-07T15:23:00.000Z</published>
+    <summary>如何精通一个领域？Chunk it up 切碎知识点；Deliberate Practicing 刻意练习；Feedback 反馈。</summary>
+    <title>学习笔记｜算法</title>
+    <updated>2020-08-07T15:23:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="算法" scheme="https://www.aimtao.net/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="LeetCode" scheme="https://www.aimtao.net/tags/LeetCode/"/>
+    <category term="动态规划" scheme="https://www.aimtao.net/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    <id>https://www.aimtao.net/dynamic-programming/</id>
+    <link href="https://www.aimtao.net/dynamic-programming/"/>
+    <published>2020-07-11T03:24:26.000Z</published>
+    <summary>动态规划是一种通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。来，一起在例题中体验 DP 乐趣。</summary>
+    <title>leetcode｜动态规划</title>
+    <updated>2020-09-15T13:38:25.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Coding" scheme="https://www.aimtao.net/categories/Coding/"/>
+    <category term="算法" scheme="https://www.aimtao.net/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="LeetCode" scheme="https://www.aimtao.net/tags/LeetCode/"/>
+    <id>https://www.aimtao.net/max-and-memset/</id>
+    <link href="https://www.aimtao.net/max-and-memset/"/>
+    <published>2020-07-11T00:24:26.000Z</published>
+    <summary>如何将数组全部初始化为无穷大？</summary>
+    <title>编程中的正无穷大和 memset 的原理</title>
+    <updated>2020-07-14T03:00:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="C/C++" scheme="https://www.aimtao.net/tags/C-C/"/>
+    <category term="LeetCode" scheme="https://www.aimtao.net/tags/LeetCode/"/>
+    <id>https://www.aimtao.net/note-of-leetcode/</id>
+    <link href="https://www.aimtao.net/note-of-leetcode/"/>
+    <published>2020-07-07T03:43:00.000Z</published>
+    <summary>本文记录平时做 leetcode 题过程中，一些值得注意的细节之处。我将按照基础语句、数据结构、算法这三个方面进行整理。</summary>
+    <title>leetcode｜细枝末节</title>
+    <updated>2020-08-09T07:23:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Practice" scheme="https://www.aimtao.net/categories/Practice/"/>
+    <category term="GitHub Action" scheme="https://www.aimtao.net/tags/GitHub-Action/"/>
+    <category term="LeanCloud" scheme="https://www.aimtao.net/tags/LeanCloud/"/>
+    <id>https://www.aimtao.net/slef-wake-leancloud/</id>
+    <link href="https://www.aimtao.net/slef-wake-leancloud/"/>
+    <published>2020-06-26T14:10:01.000Z</published>
+    <summary>Blog 评论系统休眠引发的一系列使用成本，使用 curl 处理流控问题。</summary>
+    <title>Gtihub Action｜一行命令解决 LeanCloud 流控问题</title>
+    <updated>2021-12-19T06:02:01.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="C/C++" scheme="https://www.aimtao.net/tags/C-C/"/>
+    <category term="STL" scheme="https://www.aimtao.net/tags/STL/"/>
+    <id>https://www.aimtao.net/stl/</id>
+    <link href="https://www.aimtao.net/stl/"/>
+    <published>2020-06-17T09:04:28.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>STL 是 C++ 的标准模版库，<strong>Standard Template Library</strong>。其中包含4个组件，分别为算法、容器、函数、迭代器。</p>
+</blockquote>]]>
+    </summary>
+    <title>学习笔记｜STL</title>
+    <updated>2020-08-24T06:01:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Practice" scheme="https://www.aimtao.net/categories/Practice/"/>
+    <category term="Linux" scheme="https://www.aimtao.net/tags/Linux/"/>
+    <category term="phone" scheme="https://www.aimtao.net/tags/phone/"/>
+    <category term="DIY" scheme="https://www.aimtao.net/tags/DIY/"/>
+    <id>https://www.aimtao.net/linux-deploy/</id>
+    <link href="https://www.aimtao.net/linux-deploy/"/>
+    <published>2020-06-02T14:29:51.000Z</published>
+    <summary>
+      <![CDATA[<p>因为手机 CPU、内存、储存都合适，还有丰富的接口：蓝牙、WIFI、Mirco B，而且手机的异构多核心架构，更加省电，比树莓派强不少呢。</p>]]>
+    </summary>
+    <title>用废旧手机搭建一个 Linux 服务器</title>
+    <updated>2020-06-15T08:54:23.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Coding" scheme="https://www.aimtao.net/categories/Coding/"/>
+    <category term="C/C++" scheme="https://www.aimtao.net/tags/C-C/"/>
+    <category term="C++编译器优化" scheme="https://www.aimtao.net/tags/C-%E7%BC%96%E8%AF%91%E5%99%A8%E4%BC%98%E5%8C%96/"/>
+    <id>https://www.aimtao.net/copy-elision/</id>
+    <link href="https://www.aimtao.net/copy-elision/"/>
+    <published>2020-05-31T03:53:57.000Z</published>
+    <summary>右值拷贝优化：优化用临时变量初始化新对象的拷贝构造；返回值优化：优化用临时变量做返回值时的拷贝构造。</summary>
+    <title>Copy Elision 中的返回值优化和右值拷贝优化</title>
+    <updated>2020-05-31T14:28:57.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Life" scheme="https://www.aimtao.net/categories/Life/"/>
+    <category term="phone" scheme="https://www.aimtao.net/tags/phone/"/>
+    <category term="测评" scheme="https://www.aimtao.net/tags/%E6%B5%8B%E8%AF%84/"/>
+    <id>https://www.aimtao.net/samsung/</id>
+    <link href="https://www.aimtao.net/samsung/"/>
+    <published>2020-05-18T03:51:49.000Z</published>
+    <summary>
+      <![CDATA[<p>前几天 <a href = "https://www.aimtao.net/linux-deploy/" target = "_blank">用淘汰的三星手机做了一个 Linux 服务器</a>。在使用程中，体验到了三星的一些特别之处，让人眼前一亮，甚至还找到了 ipencil 的竞品。</p>]]>
+    </summary>
+    <title>曾经鄙夷三星的我，对三星刮目相看了</title>
+    <updated>2020-06-02T03:51:49.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Coding" scheme="https://www.aimtao.net/categories/Coding/"/>
+    <category term="C/C++" scheme="https://www.aimtao.net/tags/C-C/"/>
+    <category term="算法" scheme="https://www.aimtao.net/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="LeetCode" scheme="https://www.aimtao.net/tags/LeetCode/"/>
+    <id>https://www.aimtao.net/leetcode/</id>
+    <link href="https://www.aimtao.net/leetcode/"/>
+    <published>2020-04-12T16:05:26.000Z</published>
+    <summary>
+      <![CDATA[<p>本栏目记录在 <a href = "https://leetcode-cn.com/problemset/lcof/" rel="nofollow noopener" target= "_blank">剑指offer</a> 刷题中的一些思考和反思，持续更新…</p>
+<p>如果觉得我代码太烂，欢迎留言拍砖。🎉</p>]]>
+    </summary>
+    <title>剑指 offer 刷题（持续更新...）</title>
+    <updated>2020-04-14T08:14:13.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Solution" scheme="https://www.aimtao.net/categories/Solution/"/>
+    <category term="Homebrew" scheme="https://www.aimtao.net/tags/Homebrew/"/>
+    <category term="macOS" scheme="https://www.aimtao.net/tags/macOS/"/>
+    <id>https://www.aimtao.net/homebrew/</id>
+    <link href="https://www.aimtao.net/homebrew/"/>
+    <published>2020-04-09T03:10:45.000Z</published>
+    <summary>Homebrew 需要装的是：brew 、 Homebrew Core、 Homebrew Cark。如何快速安装？</summary>
+    <title>Homebrew 的手动配置</title>
+    <updated>2020-04-09T03:10:45.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Life" scheme="https://www.aimtao.net/categories/Life/"/>
+    <category term="macOS" scheme="https://www.aimtao.net/tags/macOS/"/>
+    <category term="Keynote" scheme="https://www.aimtao.net/tags/Keynote/"/>
+    <id>https://www.aimtao.net/reinstall/</id>
+    <link href="https://www.aimtao.net/reinstall/"/>
+    <published>2020-04-09T03:10:45.000Z</published>
+    <summary>mac 又被我重装了，简单谈谈对 Keynote 的看法。</summary>
+    <title>macOS 重装感受</title>
+    <updated>2020-04-09T03:10:45.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Practice" scheme="https://www.aimtao.net/categories/Practice/"/>
+    <category term="Hexo" scheme="https://www.aimtao.net/tags/Hexo/"/>
+    <category term="GitHub Action" scheme="https://www.aimtao.net/tags/GitHub-Action/"/>
+    <id>https://www.aimtao.net/github-action-oss/</id>
+    <link href="https://www.aimtao.net/github-action-oss/"/>
+    <published>2020-04-04T03:17:36.000Z</published>
+    <summary>讲一讲 AimTao's Blog 的 CI/CD 的进阶之路。祝你少走弯路，愉快玩耍。</summary>
+    <title>GitHub Action + OSS｜Hexo 的最终归宿</title>
+    <updated>2020-04-04T03:17:36.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Coding" scheme="https://www.aimtao.net/categories/Coding/"/>
+    <category term="C/C++" scheme="https://www.aimtao.net/tags/C-C/"/>
+    <category term="算法" scheme="https://www.aimtao.net/tags/%E7%AE%97%E6%B3%95/"/>
+    <id>https://www.aimtao.net/radix-transformation/</id>
+    <link href="https://www.aimtao.net/radix-transformation/"/>
+    <published>2020-03-28T04:06:16.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>日常刷题中，会遇到一些涉及进制转换的问题。而C++作为高级语言（手动滑稽.webp），自然也有不错的进制转换的方法，封面是二进制的发明者，莱布尼茨。</p>
+</blockquote>]]>
+    </summary>
+    <title>挺好用的 C++ 进制转换</title>
+    <updated>2020-08-01T15:45:16.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Coding" scheme="https://www.aimtao.net/categories/Coding/"/>
+    <category term="C/C++" scheme="https://www.aimtao.net/tags/C-C/"/>
+    <category term="算法" scheme="https://www.aimtao.net/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="蓝桥杯" scheme="https://www.aimtao.net/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    <id>https://www.aimtao.net/lanqiao/</id>
+    <link href="https://www.aimtao.net/lanqiao/"/>
+    <published>2020-03-24T07:06:36.000Z</published>
+    <summary>
+      <![CDATA[<p><img src="https://hutu.aimtao.net/web/2020-03-24-lanqiao.webp-s" alt=""></p>
+<p>​</p>
+<p>本文记录在 <a href = "https://lx.lanqiao.cn" rel="nofollow noopener" target= "_blank">蓝桥杯</a> 刷题中发现的一个同类型问题，大数的处理。以下是「BASIC-10 十进制转十六进制」和「BASIC-30 阶乘计算」的解题分享。</p>]]>
+    </summary>
+    <title>蓝桥杯｜大数问题的处理</title>
+    <updated>2026-04-19T09:02:15.725Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Practice" scheme="https://www.aimtao.net/categories/Practice/"/>
+    <category term="Hexo" scheme="https://www.aimtao.net/tags/Hexo/"/>
+    <category term="URL" scheme="https://www.aimtao.net/tags/URL/"/>
+    <id>https://www.aimtao.net/setting-url/</id>
+    <link href="https://www.aimtao.net/setting-url/"/>
+    <published>2020-03-22T03:51:49.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>在网上几乎没有搜到相关资料，把自己摸索的结果整理在这里，Hexo 的生成静态文件的方式的确很有意思。🤖</p>
+</blockquote>]]>
+    </summary>
+    <title>URL 的结构优化</title>
+    <updated>2020-06-01T03:51:49.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="Github" scheme="https://www.aimtao.net/tags/Github/"/>
+    <category term="Git" scheme="https://www.aimtao.net/tags/Git/"/>
+    <id>https://www.aimtao.net/git/</id>
+    <link href="https://www.aimtao.net/git/"/>
+    <published>2020-03-02T06:07:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>很久以前在公众号上开了一个坑，<a href = "https://mp.weixin.qq.com/s/ehtTm-m17_gzvQoRxtxoJg" rel="nofollow noopener" target= "_blank">三分钟一起窥探Git门缝（上）</a>，迟迟没有写下，最近刚好有时间系统的过一遍 git，熟悉熟悉其各类应用场景，算是填坑完毕⛳️。</p>
+</blockquote>]]>
+    </summary>
+    <title>学习笔记｜Git</title>
+    <updated>2020-03-31T11:19:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="C/C++" scheme="https://www.aimtao.net/tags/C-C/"/>
+    <id>https://www.aimtao.net/c/</id>
+    <link href="https://www.aimtao.net/c/"/>
+    <published>2020-02-22T14:34:43.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>C 语言的知识点不多，但是比较杂。本文系统地对 C 语言进行补充学习。</p>
+</blockquote>]]>
+    </summary>
+    <title>查漏补缺｜C 语言</title>
+    <updated>2020-05-31T14:28:25.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="C/C++" scheme="https://www.aimtao.net/tags/C-C/"/>
+    <id>https://www.aimtao.net/c-plus-plus/</id>
+    <link href="https://www.aimtao.net/c-plus-plus/"/>
+    <published>2020-02-22T02:34:43.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>本文基于 C 对 C++ 进行比较学习，系统描述了面向对象编程的语法知识。</p>
+</blockquote>]]>
+    </summary>
+    <title>学习笔记｜C++</title>
+    <updated>2020-06-17T08:14:13.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="Network" scheme="https://www.aimtao.net/tags/Network/"/>
+    <id>https://www.aimtao.net/computer-network/</id>
+    <link href="https://www.aimtao.net/computer-network/"/>
+    <published>2019-10-09T07:07:44.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>本文以 OSI 七层模型为脉络，系统描述计算机网络协议及其作用、特点。</p>
+</blockquote>]]>
+    </summary>
+    <title>学习笔记｜计算机网络</title>
+    <updated>2019-10-09T07:07:44.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="MySQL" scheme="https://www.aimtao.net/tags/MySQL/"/>
+    <id>https://www.aimtao.net/mysql/</id>
+    <link href="https://www.aimtao.net/mysql/"/>
+    <published>2019-07-14T04:00:00.000Z</published>
+    <summary>CUDR，数据库必知必会。</summary>
+    <title>学习笔记｜MySQL</title>
+    <updated>2020-09-26T04:00:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="Python" scheme="https://www.aimtao.net/tags/Python/"/>
+    <id>https://www.aimtao.net/python/</id>
+    <link href="https://www.aimtao.net/python/"/>
+    <published>2019-07-08T04:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>优雅、明确、简单，人生苦短，我用 python。</p>
+</blockquote>]]>
+    </summary>
+    <title>学习笔记｜Python</title>
+    <updated>2019-07-08T04:00:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Practice" scheme="https://www.aimtao.net/categories/Practice/"/>
+    <category term="比特币" scheme="https://www.aimtao.net/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+    <category term="加密算法" scheme="https://www.aimtao.net/tags/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/"/>
+    <id>https://www.aimtao.net/bitcoin-encryption/</id>
+    <link href="https://www.aimtao.net/bitcoin-encryption/"/>
+    <published>2019-06-25T15:00:49.000Z</published>
+    <summary>省流版：密码学在加密货币的运用主要体现在三个方面，分别是支付信息加密、数字签名、去中心化。</summary>
+    <title>比特币中密码学的应用</title>
+    <updated>2019-06-25T15:00:49.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="操作系统" scheme="https://www.aimtao.net/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://www.aimtao.net/operating-system/</id>
+    <link href="https://www.aimtao.net/operating-system/"/>
+    <published>2019-05-31T07:46:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>本文系统描述操作系统的主要功能，重点在于全局的知识框架，而非细节。</p>
+</blockquote>]]>
+    </summary>
+    <title>学习笔记｜操作系统</title>
+    <updated>2020-08-28T03:35:17.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Read" scheme="https://www.aimtao.net/categories/Read/"/>
+    <category term="《硅谷之谜》" scheme="https://www.aimtao.net/tags/%E3%80%8A%E7%A1%85%E8%B0%B7%E4%B9%8B%E8%B0%9C%E3%80%8B/"/>
+    <category term="信息论" scheme="https://www.aimtao.net/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/"/>
+    <id>https://www.aimtao.net/mystery-of-silicon-valley/</id>
+    <link href="https://www.aimtao.net/mystery-of-silicon-valley/"/>
+    <published>2019-02-19T07:06:21.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>上个月看了一本《硅谷之谜》，我原以为这仅仅是一本历史类人文书籍，因为它前半部分的确写的是硅谷文化、制度、发展、管理之类的内容，但是越看到后面就越让人激动了。</p>
+</blockquote>]]>
+    </summary>
+    <title>《硅谷之谜》｜为何硅谷 4 次转型后依旧长盛不衰</title>
+    <updated>2019-02-19T07:06:21.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Read" scheme="https://www.aimtao.net/categories/Read/"/>
+    <category term="《硅谷之谜》" scheme="https://www.aimtao.net/tags/%E3%80%8A%E7%A1%85%E8%B0%B7%E4%B9%8B%E8%B0%9C%E3%80%8B/"/>
+    <category term="信息论" scheme="https://www.aimtao.net/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/"/>
+    <id>https://www.aimtao.net/internet-thinking/</id>
+    <link href="https://www.aimtao.net/internet-thinking/"/>
+    <published>2019-02-19T00:37:19.000Z</published>
+    <summary>
+      <![CDATA[<p><img src="https://hutu.aimtao.net/post/InternetThinking-07.webp-s" alt=""></p>
+<h2 id="互联网思维的本质就是信息论">互联网思维的本质就是信息论</h2>]]>
+    </summary>
+    <title>《硅谷之谜》｜13 个字揭密到底什么是互联网思维</title>
+    <updated>2019-02-19T00:37:19.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Practice" scheme="https://www.aimtao.net/categories/Practice/"/>
+    <category term="学习通" scheme="https://www.aimtao.net/tags/%E5%AD%A6%E4%B9%A0%E9%80%9A/"/>
+    <category term="Chrome插件" scheme="https://www.aimtao.net/tags/Chrome%E6%8F%92%E4%BB%B6/"/>
+    <id>https://www.aimtao.net/mooc-chaoxing/</id>
+    <link href="https://www.aimtao.net/mooc-chaoxing/"/>
+    <published>2018-11-28T07:28:05.000Z</published>
+    <summary>
+      <![CDATA[<p>时近年底，各种学习软件的视频任务都将接近截止日期，天天拿着手机刷视频，难道是想让我多买几部手机？</p>]]>
+    </summary>
+    <title>刷学习通等各类学习软件视频</title>
+    <updated>2020-05-12T06:50:54.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="Linux" scheme="https://www.aimtao.net/tags/Linux/"/>
+    <id>https://www.aimtao.net/linux/</id>
+    <link href="https://www.aimtao.net/linux/"/>
+    <published>2018-11-21T15:36:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>Linux 系统使用入门，本文系统地记录常见命令、服务。</p>
+</blockquote>]]>
+    </summary>
+    <title>学习笔记｜Linux 命令</title>
+    <updated>2021-01-22T07:34:32.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>AimTao</name>
+    </author>
+    <category term="Mark" scheme="https://www.aimtao.net/categories/Mark/"/>
+    <category term="前端" scheme="https://www.aimtao.net/tags/%E5%89%8D%E7%AB%AF/"/>
+    <id>https://www.aimtao.net/html/</id>
+    <link href="https://www.aimtao.net/html/"/>
+    <published>2018-07-15T06:27:25.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>进入 web1.0 时代。</p>
+</blockquote>]]>
+    </summary>
+    <title>学习笔记｜HTML</title>
+    <updated>2020-05-12T06:50:54.000Z</updated>
+  </entry>
+</feed>
